@@ -68,4 +68,5 @@ Note : Change Server Configurations and Database Connection properties in '${MOD
 
 
 Note : Please find more detailed documetaion in ./docs directory
-       Please find sources in ./src directory
+       Please find sources in ./src directory.
+	   Spring prefixes role names with 'ROLE_' (Refer : edu.mc2.sms.service.security.UserDetailsServiceImpl and edu.mc2.sms.model.Role). 
