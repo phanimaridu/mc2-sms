@@ -1,14 +1,14 @@
 A School maintenance application (Designed for MC2 STEM HIGH SCHOOL)
 
 If you are looking for Spring Web MVC Rest Application with JDBC Role based security clone inital release.
-Sample Spring Unit Testcases and Web Intigration testcasses provided in inital release.
+Sample Spring Unit Test cases and Web Integration test cases provided in inital release.
 TODO: Provide Clone Link
 
 Technologies Used
 -----------------
 JDK 1.7.0
 Maven 3.2.3
-Spring Development Tool Suite
+Spring Development Tool Suite 3.6.4 (IDE)
 Spring 4
   Spring Boot
   Spring Data
@@ -20,8 +20,9 @@ MySQL Workbench
 GIT
 Bootstrap
 Angular JS
-Pencil 2.* (Design and Wireframes) 
+Pencil 2.* (Design and Wire-frames) 
 
+Note : you can also use eclipse by generating eclipse project from pom.xml (mvn eclipse:eclipse)
 
 
 Modules
