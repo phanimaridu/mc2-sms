@@ -1,8 +1,8 @@
 A School maintenance application (Designed for MC2 STEM HIGH SCHOOL)
 
-If you are looking for Spring Web MVC Rest Application with JDBC Role based security clone inital release.
-Sample Spring Unit Testcases and Web Intigration testcasses provided in inital release.
-TODO: Provide Clone Link
+If you are looking for Spring Web MVC Rest Application with JDBC Role based security clone inital branch.
+Sample Spring Unit Testcases and Web Intigration testcasses provided in inital branch.
+clone link : https://github.com/phanimaridu/mc2-sms.git
 
 
 Technologies Used
