@@ -22,6 +22,7 @@ GIT
 Bootstrap
 Angular JS
 Pencil 2.* (Design and Wire-frames) 
+ArgoUML
 
 Note : you can also use eclipse by generating eclipse project from pom.xml (mvn eclipse:eclipse)
 
