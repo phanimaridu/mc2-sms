@@ -43,7 +43,10 @@ Install MySQL and import DB Scripts (./db/sms.sql)
 Build sources using (mvn package) 
 Run application from JAR (java -jar target/mc2-sms-rest-0.1.0.jar)
 
+
 Refer : https://spring.io/guides/gs/spring-boot/
+Note : Change Server Configurations and Database Connection properties in '${MODULE}/src/main/resources/application.properties' file. 
+       No need to install any web server . Just start the jar using command
 
 
 
