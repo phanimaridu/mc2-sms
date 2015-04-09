@@ -11,13 +11,15 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import edu.mc2.sms.Application;
+import edu.mc2.sms.jpa.repository.UserRepository;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class)
-public class UserDAOTest {
+public class UserRepositoryTest {
+
 
 	@Autowired
-	private UserDAO userDAO;
+	private UserRepository userDAO;
 	
 	
 	@BeforeClass
@@ -43,7 +45,7 @@ public class UserDAOTest {
 	
 	@Test
 	public void test() {
-		System.out.println(">>>>>>>>>>>>>>" + userDAO.getCount());
+		System.out.println(">>>>>>>>>>>>>>" + userDAO.count());
 	}
 
 }

@@ -1,0 +1,272 @@
+--------
+GET ALL
+--------
+
+Request Headers
+---------------
+(Request-Line)	GET /users HTTP/1.1
+Host	localhost:8081
+User-Agent	Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0
+Accept	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language	null
+Accept-Encoding	gzip, deflate
+Cookie	JSESSIONID=EBA51143025D4E874B256DBA662AFA34
+Connection	keep-alive
+
+Response
+--------
+[
+  {
+    "userName": "phanimaridu",
+    "accountExpireTs": null,
+    "active": 1,
+    "createdTs": 1423880820000,
+    "credentialsExpireTs": null,
+    "lastAccessTs": 1423880826000,
+    "modifiedTs": 1423880823000,
+    "roles": [
+      {
+        "id": 1,
+        "name": "ROLE_ADMIN"
+      },
+      {
+        "id": 2,
+        "name": "ROLE_STAFF"
+      },
+      {
+        "id": 3,
+        "name": "ROLE_STUDENT"
+      }
+    ]
+  },
+  {
+    "userName": "sunnymaridu",
+    "accountExpireTs": null,
+    "active": 1,
+    "createdTs": 1426916330000,
+    "credentialsExpireTs": null,
+    "lastAccessTs": 1426916335000,
+    "modifiedTs": 1426916333000,
+    "roles": [
+      {
+        "id": 3,
+        "name": "ROLE_STUDENT"
+      }
+    ]
+  },
+  {
+    "userName": "tejamaridu",
+    "accountExpireTs": null,
+    "active": 1,
+    "createdTs": 1426916214000,
+    "credentialsExpireTs": null,
+    "lastAccessTs": 1426916219000,
+    "modifiedTs": 1426916217000,
+    "roles": [
+      {
+        "id": 2,
+        "name": "ROLE_STAFF"
+      },
+      {
+        "id": 3,
+        "name": "ROLE_STUDENT"
+      }
+    ]
+  }
+]
+
+
+
+
+------------
+GET - {NAME}
+------------
+
+Request Headers
+---------------
+(Request-Line)	GET /users/phanimaridu HTTP/1.1
+Host	localhost:8081
+User-Agent	Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0
+Accept	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language	null
+Accept-Encoding	gzip, deflate
+Cookie	JSESSIONID=EBA51143025D4E874B256DBA662AFA34
+Authorization	Basic cGhhbmltYXJpZHU6cGFzcw==
+Connection	keep-alive
+
+Response
+--------
+{
+  "userName": "phanimaridu",
+  "accountExpireTs": null,
+  "active": 1,
+  "createdTs": 1423880820000,
+  "credentialsExpireTs": null,
+  "lastAccessTs": 1423880826000,
+  "modifiedTs": 1423880823000,
+  "roles": [
+    {
+      "id": 1,
+      "name": "ROLE_ADMIN"
+    },
+    {
+      "id": 2,
+      "name": "ROLE_STAFF"
+    },
+    {
+      "id": 3,
+      "name": "ROLE_STUDENT"
+    }
+  ]
+}
+
+
+
+-----
+POST
+-----
+
+Request Headers
+---------------
+
+(Request-Line)	POST /users HTTP/1.1
+Host	localhost:8081
+User-Agent	Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0
+Accept	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language	null
+Accept-Encoding	gzip, deflate
+Content-Type	application/json; charset=UTF-8
+Content-Length	295
+Cookie	JSESSIONID=EBA51143025D4E874B256DBA662AFA34
+Connection	keep-alive
+Pragma	no-cache
+Cache-Control	no-cache
+
+Request Body
+------------
+{
+  "userName": "varalaxmi",
+  "accountExpireTs": null,
+  "password" : "password",
+  "active": 0,
+  "createdTs": 1423880820000,
+  "credentialsExpireTs": null,
+  "lastAccessTs": 1423880826000,
+  "modifiedTs": 1423880823000,
+  "roles": [
+    {
+      "id": 1,
+      "name": "ROLE_ADMIN"
+    }
+  ]
+}
+
+Response Headers
+----------------
+(Status-Line)	HTTP/1.1 201 Created
+Server	Apache-Coyote/1.1
+x-content-type-options	nosniff
+x-xss-protection	1; mode=block
+Cache-Control	no-cache, no-store, max-age=0, must-revalidate
+Pragma	no-cache
+Expires	0
+X-Frame-Options	DENY
+Location	http://localhost:8081/users/varalaxmi
+Content-Length	0
+Date	Wed, 08 Apr 2015 22:45:51 GMT
+
+
+
+
+-----
+PUT
+-----
+
+Request Headers
+---------------
+(Request-Line)	PUT /users/phanimaridu HTTP/1.1
+Host	localhost:8081
+User-Agent	Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0
+Accept	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language	null
+Accept-Encoding	gzip, deflate
+Content-Type	application/json; charset=UTF-8
+Content-Length	403
+Cookie	JSESSIONID=F03EE589B9734FE75C42264B633C0672
+Authorization	Basic cGhhbmltYXJpZHU6cGFzcw==
+Connection	keep-alive
+
+Request Body
+------------
+{
+  "userName": "phanimaridu",
+  "password": "123",
+  "accountExpireTs": null,
+  "active": 1,
+  "createdTs": 1423880820000,
+  "credentialsExpireTs": null,
+  "lastAccessTs": 1423880826000,
+  "modifiedTs": 1423880823000,
+  "roles": [
+    {
+      "id": 1,
+      "name": "ROLE_ADMIN"
+    },
+    {
+      "id": 2,
+      "name": "ROLE_STAFF"
+    },
+    {
+      "id": 3,
+      "name": "ROLE_STUDENT"
+    }
+  ]
+}
+
+Response Headers
+----------------
+(Status-Line)	HTTP/1.1 202 Accepted
+Server	Apache-Coyote/1.1
+x-content-type-options	nosniff
+x-xss-protection	1; mode=block
+Cache-Control	no-cache, no-store, max-age=0, must-revalidate
+Pragma	no-cache
+Expires	0
+X-Frame-Options	DENY
+Content-Length	0
+Date	Wed, 08 Apr 2015 23:01:17 GMT
+
+
+------
+DELETE
+------
+
+Request Headers
+---------------
+(Request-Line)	DELETE /users/varalaxmi HTTP/1.1
+Host	localhost:8081
+User-Agent	Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0
+Accept	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language	null
+Accept-Encoding	gzip, deflate
+Content-Type	application/json; charset=UTF-8
+Content-Length	294
+Cookie	JSESSIONID=EBA51143025D4E874B256DBA662AFA34
+Authorization	Basic cGhhbmltYXJpZHU6cGFzcw==
+Connection	keep-alive
+
+Response Headers
+----------------
+(Status-Line)	HTTP/1.1 200 OK
+Server	Apache-Coyote/1.1
+x-content-type-options	nosniff
+x-xss-protection	1; mode=block
+Cache-Control	no-cache, no-store, max-age=0, must-revalidate
+Pragma	no-cache
+Expires	0
+X-Frame-Options	DENY
+Content-Length	0
+Date	Wed, 08 Apr 2015 22:54:04 GMT
+
+
+

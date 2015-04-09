@@ -1,5 +1,6 @@
 package edu.mc2.sms.cntrlr.rest.common;
 
+
 import java.util.Arrays;
 
 import org.apache.http.HttpHeaders;
@@ -18,7 +19,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.web.client.RestTemplate;
 
 import edu.mc2.sms.Application;
-import edu.mc2.sms.model.User;
+import edu.mc2.sms.jpa.entity.User;
 import edu.mc2.sms.util.RestUtil;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -27,7 +28,7 @@ import edu.mc2.sms.util.RestUtil;
 public class UserControllerTest {
 
 	//TODO:Get port number from properties
-	private String USER_URI = "http://localhost:8081/user/";
+	private String USER_URI = "http://localhost:8081/users/";
 	
 	private RestTemplate template = new TestRestTemplate();
 	
@@ -56,7 +57,7 @@ public class UserControllerTest {
 	public void test() {
 		
 		User[] users = template.exchange(USER_URI, HttpMethod.GET, 
-				new HttpEntity<HttpHeaders>(RestUtil.createHeaders("phanimaridu", "pass")),  User[].class).getBody();
+				new HttpEntity<HttpHeaders>(RestUtil.createHeaders("phanimaridu", "123")),  User[].class).getBody();
 		
 		System.out.println(">>>>>>>>>>>>>>" + Arrays.asList(users));
 

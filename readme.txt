@@ -1,8 +1,10 @@
 A School maintenance application (Designed for MC2 STEM HIGH SCHOOL)
 
-If you are looking for Spring Web MVC Rest Application with JDBC Role based security clone initial branch.
-Sample Spring Unit Test cases and Web Intigration Test cases provided in initial branch.
-clone link : https://github.com/phanimaridu/mc2-sms.git
+If you are looking for Spring Web MVC Rest Application with JDBC Role based security clone security-initial branch.
+  - Security implemented by using Spring UserDataService and spring-data-jpa.
+  - User Rest Controller implemented with GET,PUT,POST,DELETE (Complies with Richardson Maturity Model Level - 2 Standards)
+  - Sample Spring Unit Test cases and Web Integration Test cases provided in this branch.
+  clone link : https://github.com/phanimaridu/mc2-sms.git
 
 
 Technologies Used
@@ -12,7 +14,8 @@ Maven 3.2.3
 Spring Development Tool Suite 3.6.4 (IDE)
 Spring 4
   Spring Boot
-  Spring Data
+  Spring Data JPA
+  Hibernate
   Spring Test
   Spring Security
   Spring Web MVC (Restful Webservices)
@@ -48,7 +51,7 @@ Modules
 mc2-sms-rest (contaims web servics secured with role based basic authentication)
 mc2-sms-web-gui (Bootstrap,AngularJS based MVC GUI consuming mc2-sms-rest) 
 
-Note : mc2-sms-rest    (implemnetation in progress)
+Note : mc2-sms-rest    (implementation in progress)
        mc2-sms-web-gui (in design phase)
        
        
@@ -67,6 +70,7 @@ Note : Change Server Configurations and Database Connection properties in '${MOD
 
 
 
-Note : Please find more detailed documetaion in ./docs directory
+Note : Please find more detailed documentation in ./docs directory
+	   Please find restful web service traces in ./docs/rest_api/traces directory.
        Please find sources in ./src directory.
-	   Spring prefixes role names with 'ROLE_' (Refer : edu.mc2.sms.service.security.UserDetailsServiceImpl and edu.mc2.sms.model.Role). 
+	   Spring prefixes role names with 'ROLE_'
