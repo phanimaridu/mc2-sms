@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>mc2-sms by phanimaridu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">mc2-sms</h1>
+      <h2 class="project-tagline">A School maintenance application (Designed for MC2 STEM HIGH SCHOOL)</h2>
+      <a href="https://github.com/phanimaridu/mc2-sms" class="btn">View on GitHub</a>
+      <a href="https://github.com/phanimaridu/mc2-sms/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/phanimaridu/mc2-sms/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h3>
+<a id="a-school-maintenance-application-designed-for-mc2-stem-high-school" class="anchor" href="#a-school-maintenance-application-designed-for-mc2-stem-high-school" aria-hidden="true"><span class="octicon octicon-link"></span></a>A School maintenance application (Designed for MC2 STEM HIGH SCHOOL)</h3>
+
+<p>If you are looking for Spring Web MVC Rest Application with JDBC Role based security clone security-initial branch.</p>
+
+<pre><code>- Security implemented by using Spring UserDataService and spring-data-jpa.
+  - User Rest Controller implemented with GET,PUT,POST,DELETE (Complies with Richardson Maturity Model Level - 2 Standards)
+  - Sample Spring Unit Test cases and Web Integration Test cases provided in this branch.
+  clone link : https://github.com/phanimaridu/mc2-sms.git
+</code></pre>
+
+<h3>
+<a id="technologies-used" class="anchor" href="#technologies-used" aria-hidden="true"><span class="octicon octicon-link"></span></a>Technologies Used</h3>
+
+<pre><code>JDK 1.7.0
+Maven 3.2.3
+Spring Development Tool Suite 3.6.4 (IDE)
+Spring 4
+  Spring Boot
+  Spring Data JPA
+  Hibernate
+  Spring Test
+  Spring Security
+  Spring Web MVC (Restful Webservices)
+MySQL 5.6
+MySQL Workbench
+GIT
+Bootstrap
+Angular JS
+Pencil 2.* (Design and Wire-frames) 
+ArgoUML
+</code></pre>
+
+<p>Note : you can also use eclipse by generating eclipse project from pom.xml (mvn eclipse:eclipse)</p>
+
+<h3>
+<a id="downloads" class="anchor" href="#downloads" aria-hidden="true"><span class="octicon octicon-link"></span></a>Downloads</h3>
+
+<pre><code>JDK 1.7.0            (http://download.oracle.com/otn-pub/java/jdk/7u75-b13/jdk-7u75-windows-x64.exe)
+Maven 3.2.3          (http://www.trieuvan.com/apache/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.zip)
+Spring STS 3.6.4     (http://dist.springsource.com/release/STS/3.6.4.RELEASE/dist/e4.4/spring-tool-suite-3.6.4.RELEASE-e4.4.2-win32-x86_64.zip)
+MySQL 5.6            (http://dev.mysql.com/downloads/)
+MySQL Workbench      (http://dev.mysql.com/downloads/)
+Pencil 2.*           (http://evoluspencil.googlecode.com/files/Pencil-2.0.5.win32.installer.exe)
+ArgoUML              (http://sourceforge.net/projects/argouml.mirror/)
+</code></pre>
+
+<p>All Spring Dependencies are automatically downloaded by using mvn package.
+AngularJS and Bootstrap libraries are provided with gui module source files.</p>
+
+<h3>
+<a id="modules" class="anchor" href="#modules" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modules</h3>
+
+<p>mc2-sms-rest (contaims web servics secured with role based basic authentication)
+mc2-sms-web-gui (Bootstrap,AngularJS based MVC GUI consuming mc2-sms-rest) </p>
+
+<p>Note : mc2-sms-rest    (implementation in progress)
+       mc2-sms-web-gui (in design phase)</p>
+
+<h3>
+<a id="how-to-run-mc2-sms-rest" class="anchor" href="#how-to-run-mc2-sms-rest" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to Run mc2-sms-rest</h3>
+
+<pre><code>Install JAVA and MAVEN
+Install MySQL and import DB Scripts (./db/sms.sql)
+Build sources using (mvn package) 
+Run application from JAR (java -jar target/mc2-sms-rest-0.1.0.jar)
+</code></pre>
+
+<p>Refer : <a href="https://spring.io/guides/gs/spring-boot/">https://spring.io/guides/gs/spring-boot/</a>
+Note : Change Server Configurations and Database Connection properties in 
+       '${MODULE}/src/main/resources/application.properties' file. 
+       No need to install any web server. Just start the jar using command</p>
+
+<h3>
+<a id="note" class="anchor" href="#note" aria-hidden="true"><span class="octicon octicon-link"></span></a>Note</h3>
+
+<pre><code>Please find more detailed documentation in ./docs directory
+Please find restful web service traces in ./docs/rest_api/traces directory.
+Please find sources in ./src directory.
+Spring prefixes role names with 'ROLE_'
+</code></pre>
+
+<h3>
+<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+
+<h3>
+<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>Phani Sudheer Maridu</p>
+
+<h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<ul>
+<li>Phani Sudheer Maridu a.k.a. Venkata Maridu</li>
+<li><a href="mailto:phani.vjec@gmail.com">phani.vjec@gmail.com</a></li>
+<li><a href="https://www.linkedin.com/profile/view?id=175409004">https://www.linkedin.com/profile/view?id=175409004</a></li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/phanimaridu/mc2-sms">mc2-sms</a> is maintained by <a href="https://github.com/phanimaridu">phanimaridu</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
