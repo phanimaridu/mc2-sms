@@ -10,7 +10,6 @@ http://localhost:8081/student
 http://localhost:8081/anonymous
  */
 @SpringBootApplication
-//@ImportResource("classpath:spring-data-source-config.xml")
 public class Application {
 
     public static void main(String[] args) {
