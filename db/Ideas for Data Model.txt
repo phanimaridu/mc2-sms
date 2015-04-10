@@ -1,23 +1,16 @@
-Tables
-------
-
-Security Specific 
------------------
-
-  - user
-  - role 
-  - user_role
   
-
-Application Specific
---------------------
-
-  - person (names and personal details)
-  - student (parent e-mail)
-  - staff (type : teacher or admin, specialization,can teach )
-  - class a.k.a course (class info associated with staff id a.k.a teacher id)
-  - student_class (contains mapping b/w student and class)
-  - calender (event_name,from_dtt,to_dtt, created by )
-  - attendance (studen_user_name,class_id,dtt)
+AUDIT
+-----
   
+   MAINNTAIN A AUDIT TABLE TO TRACK CHANGES IN IMPORTAINT TABLES 
+   WRITE TRIGGERS FOR AUDIT MAINTAINCE
+   REASON - DO NOT MIX META DATA WITH ACTUAL DATA
+   
+   - person_audit
+   - role_audit
+   - 
+
+
+
+ 
  

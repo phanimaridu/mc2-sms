@@ -40,6 +40,7 @@ MySQL 5.6            (http://dev.mysql.com/downloads/)
 MySQL Workbench      (http://dev.mysql.com/downloads/)
 Pencil 2.*           (http://evoluspencil.googlecode.com/files/Pencil-2.0.5.win32.installer.exe)
 ArgoUML              (http://sourceforge.net/projects/argouml.mirror/)
+AngularJS Plugin     (http://marketplace.eclipse.org/content/angularjs-eclipse)
 
 All Spring Dependencies are automatically downloaded by using mvn package.
 AngularJS and Bootstrap libraries are provided with gui module source files.
