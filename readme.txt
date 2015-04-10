@@ -72,6 +72,6 @@ Note : Change Server Configurations and Database Connection properties in '${MOD
 
 
 Note : Please find more detailed documentation in ./docs directory
-	   Please find restful web service traces in ./docs/rest_api/traces directory.
+       Please find restful web service traces in ./docs/rest_api/traces directory.
        Please find sources in ./src directory.
-	   Spring prefixes role names with 'ROLE_'
+       Spring prefixes role names with 'ROLE_'
