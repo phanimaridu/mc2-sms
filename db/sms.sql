@@ -10,10 +10,98 @@ Target Server Type    : MYSQL
 Target Server Version : 50616
 File Encoding         : 65001
 
-Date: 2015-03-31 18:46:56
+Date: 2015-04-10 14:40:20
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for attendance
+-- ----------------------------
+DROP TABLE IF EXISTS `attendance`;
+CREATE TABLE `attendance` (
+  `id` int(11) NOT NULL,
+  `student_course_enrollment_id` int(11) DEFAULT NULL,
+  `taken_dtt` datetime DEFAULT NULL,
+  `taken_by` varchar(50) DEFAULT NULL,
+  `comment` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `student_course_enrollment_id_fk` (`student_course_enrollment_id`),
+  KEY `staff_id_fk3` (`taken_by`),
+  CONSTRAINT `attendance_ibfk_3` FOREIGN KEY (`taken_by`) REFERENCES `staff` (`user_name`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `attendance_ibfk_2` FOREIGN KEY (`student_course_enrollment_id`) REFERENCES `student_course_enrollment` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of attendance
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for contact
+-- ----------------------------
+DROP TABLE IF EXISTS `contact`;
+CREATE TABLE `contact` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  `home_phone` varchar(20) DEFAULT NULL,
+  `address_line_1` varchar(255) DEFAULT NULL,
+  `address_line_2` varchar(255) DEFAULT NULL,
+  `apartment` varchar(255) DEFAULT NULL,
+  `street` varchar(255) DEFAULT NULL,
+  `city` varchar(255) DEFAULT NULL,
+  `state` varchar(50) DEFAULT NULL,
+  `country` varchar(255) DEFAULT NULL,
+  `zip` int(10) DEFAULT NULL,
+  `notes` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of contact
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for course
+-- ----------------------------
+DROP TABLE IF EXISTS `course`;
+CREATE TABLE `course` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `dept` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `credits` tinyint(1) DEFAULT NULL,
+  `academic_year` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of course
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for course_schedule
+-- ----------------------------
+DROP TABLE IF EXISTS `course_schedule`;
+CREATE TABLE `course_schedule` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `course_id` int(11) NOT NULL,
+  `instructor_user_name` varchar(255) DEFAULT NULL,
+  `status` tinyint(1) DEFAULT NULL,
+  `term` varchar(25) DEFAULT NULL,
+  `start_dtt` datetime DEFAULT NULL,
+  `end_dtt` datetime DEFAULT NULL,
+  `room_no` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `course_fk` (`course_id`),
+  KEY `instructor_id_fk` (`instructor_user_name`),
+  CONSTRAINT `course_schedule_ibfk_2` FOREIGN KEY (`instructor_user_name`) REFERENCES `staff` (`user_name`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `course_schedule_ibfk_1` FOREIGN KEY (`course_id`) REFERENCES `course` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of course_schedule
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for person
@@ -21,23 +109,36 @@ SET FOREIGN_KEY_CHECKS=0;
 DROP TABLE IF EXISTS `person`;
 CREATE TABLE `person` (
   `user_name` varchar(255) NOT NULL,
-  `first_name` varchar(255) DEFAULT NULL,
-  `last_name` varchar(255) DEFAULT NULL,
-  `sex` varchar(10) NOT NULL,
-  `phone` varchar(20) DEFAULT NULL,
-  `address` varchar(500) DEFAULT NULL,
-  `e_mail` varchar(255) DEFAULT NULL,
-  `future_use` text,
+  `id` varchar(50) NOT NULL DEFAULT '',
+  `f_name` varchar(255) DEFAULT NULL,
+  `m_name` varchar(255) DEFAULT NULL,
+  `l_name` varchar(255) DEFAULT NULL,
+  `prefix` varchar(255) DEFAULT NULL,
+  `suffix` varchar(255) DEFAULT NULL,
+  `dob` datetime DEFAULT NULL,
+  `height` float DEFAULT NULL COMMENT 'feet units',
+  `weight` float DEFAULT NULL COMMENT 'in lbs',
+  `race` varchar(100) DEFAULT NULL,
+  `eye_color` tinyint(1) DEFAULT NULL COMMENT '1 - black, 2 - blue, 3 - green, 4 - brown',
+  `hair_color` tinyint(1) DEFAULT NULL COMMENT '1 - black, 2 - blonde,3 - red, 4 - brown, 5 - other',
+  `sex` bit(1) DEFAULT NULL COMMENT '0 - female , 1 - male , null - unknown',
+  `picture_uri` varchar(1000) DEFAULT NULL,
+  `ssn` int(9) DEFAULT NULL,
+  `joining_dtt` datetime DEFAULT NULL,
+  `contact` int(11) DEFAULT NULL,
+  `emr_contact` int(11) DEFAULT NULL,
   PRIMARY KEY (`user_name`),
-  CONSTRAINT `person_user_name` FOREIGN KEY (`user_name`) REFERENCES `user` (`user_name`) ON DELETE CASCADE ON UPDATE CASCADE
+  KEY `user_name_fk` (`user_name`),
+  KEY `contact_fk` (`contact`),
+  KEY `emr_contact_fk` (`emr_contact`),
+  CONSTRAINT `user_name_ibfk3` FOREIGN KEY (`user_name`) REFERENCES `user` (`user_name`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `person_ibfk_1` FOREIGN KEY (`contact`) REFERENCES `contact` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `person_ibfk_2` FOREIGN KEY (`emr_contact`) REFERENCES `contact` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of person
 -- ----------------------------
-INSERT INTO `person` VALUES ('phanimaridu', 'Venkata', 'Maridu', 'M', '001 216-820-3556', '1700 E,13 ST,APT 5R', 'phani.vjec@gmail.com', '');
-INSERT INTO `person` VALUES ('sunnymaridu', 'Sunny', 'Maridu', 'M', null, null, null, null);
-INSERT INTO `person` VALUES ('tejamaridu', 'Teja', 'Maridu', 'M', null, null, null, null);
 
 -- ----------------------------
 -- Table structure for role
@@ -57,27 +158,101 @@ INSERT INTO `role` VALUES ('2', 'ROLE_STAFF');
 INSERT INTO `role` VALUES ('3', 'ROLE_STUDENT');
 
 -- ----------------------------
+-- Table structure for school_schedule
+-- ----------------------------
+DROP TABLE IF EXISTS `school_schedule`;
+CREATE TABLE `school_schedule` (
+  `id` int(11) NOT NULL,
+  `event_name` varchar(255) DEFAULT NULL,
+  `status` tinyint(1) DEFAULT NULL,
+  `start_dtt` datetime DEFAULT NULL,
+  `end_dtt` datetime DEFAULT NULL,
+  `annonced_by` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of school_schedule
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for staff
+-- ----------------------------
+DROP TABLE IF EXISTS `staff`;
+CREATE TABLE `staff` (
+  `user_name` varchar(255) NOT NULL,
+  `status` tinyint(1) DEFAULT NULL,
+  `designation` varchar(255) DEFAULT NULL,
+  `future_use` varchar(1000) DEFAULT NULL,
+  `notes` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`user_name`),
+  CONSTRAINT `staff_ibfk_1` FOREIGN KEY (`user_name`) REFERENCES `person` (`user_name`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of staff
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for student
+-- ----------------------------
+DROP TABLE IF EXISTS `student`;
+CREATE TABLE `student` (
+  `user_name` varchar(255) NOT NULL,
+  `status` tinyint(1) DEFAULT NULL,
+  `parent_email` varchar(255) DEFAULT NULL,
+  `future_use` varchar(1000) DEFAULT NULL,
+  `level` varchar(255) DEFAULT NULL COMMENT 'class name,grade_type',
+  PRIMARY KEY (`user_name`),
+  CONSTRAINT `student_ibfk_1` FOREIGN KEY (`user_name`) REFERENCES `person` (`user_name`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of student
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for student_course_enrollment
+-- ----------------------------
+DROP TABLE IF EXISTS `student_course_enrollment`;
+CREATE TABLE `student_course_enrollment` (
+  `id` int(11) NOT NULL,
+  `course_schedule_id` int(11) DEFAULT NULL,
+  `student_user_name` varchar(255) DEFAULT NULL,
+  `enrolled_dtt` datetime DEFAULT NULL,
+  `status` tinyint(1) DEFAULT NULL,
+  `grade` varchar(10) DEFAULT NULL,
+  `graded_dtt` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `course_schedule_id_fk` (`course_schedule_id`),
+  KEY `student_id_fk_2` (`student_user_name`),
+  CONSTRAINT `student_course_enrollment_ibfk_2` FOREIGN KEY (`student_user_name`) REFERENCES `student` (`user_name`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `student_course_enrollment_ibfk_1` FOREIGN KEY (`course_schedule_id`) REFERENCES `course_schedule` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of student_course_enrollment
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for user
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `user_name` varchar(255) NOT NULL,
   `password` varchar(500) NOT NULL COMMENT 'md5',
-  `active` tinyint(1) NOT NULL,
-  `created_ts` datetime DEFAULT NULL,
-  `modified_ts` datetime DEFAULT NULL,
-  `last_access_ts` datetime DEFAULT NULL,
-  `credentials_expire_ts` datetime DEFAULT NULL,
-  `account_expire_ts` datetime DEFAULT NULL,
+  `password_salt` varchar(255) DEFAULT NULL,
+  `active` tinyint(1) NOT NULL COMMENT '0 - inactive , 1 - active, 2 - blocked, 3 - temp_blocked',
+  `e_mail` varchar(255) DEFAULT NULL,
+  `last_access_dtt` datetime DEFAULT NULL,
+  `credentials_expire_dtt` datetime DEFAULT NULL,
+  `account_expire_dtt` datetime DEFAULT NULL,
   PRIMARY KEY (`user_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('phanimaridu', '1a1dc91c907325c69271ddf0c944bc72', '1', '2015-02-13 21:27:00', '2015-02-13 21:27:03', '2015-02-13 21:27:06', null, null);
-INSERT INTO `user` VALUES ('sunnymaridu', '5f4dcc3b5aa765d61d8327deb882cf99', '1', '2015-03-21 01:38:50', '2015-03-21 01:38:53', '2015-03-21 01:38:55', null, null);
-INSERT INTO `user` VALUES ('tejamaridu', '5f4dcc3b5aa765d61d8327deb882cf99', '1', '2015-03-21 01:36:54', '2015-03-21 01:36:57', '2015-03-21 01:36:59', null, null);
 
 -- ----------------------------
 -- Table structure for user_in_role
@@ -88,16 +263,10 @@ CREATE TABLE `user_in_role` (
   `role_id` int(11) NOT NULL,
   KEY `users_in_roles_user_name` (`user_name`),
   KEY `users_in_roles_role_id` (`role_id`),
-  CONSTRAINT `users_in_roles_role_id` FOREIGN KEY (`role_id`) REFERENCES `role` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `users_in_roles_user_name` FOREIGN KEY (`user_name`) REFERENCES `user` (`user_name`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `user_in_role_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `role` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `user_in_role_ibfk_2` FOREIGN KEY (`user_name`) REFERENCES `user` (`user_name`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of user_in_role
 -- ----------------------------
-INSERT INTO `user_in_role` VALUES ('phanimaridu', '1');
-INSERT INTO `user_in_role` VALUES ('tejamaridu', '2');
-INSERT INTO `user_in_role` VALUES ('phanimaridu', '2');
-INSERT INTO `user_in_role` VALUES ('phanimaridu', '3');
-INSERT INTO `user_in_role` VALUES ('sunnymaridu', '3');
-INSERT INTO `user_in_role` VALUES ('tejamaridu', '3');

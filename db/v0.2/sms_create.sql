@@ -4,13 +4,13 @@ Navicat MySQL Data Transfer
 Source Server         : MySQL
 Source Server Version : 50616
 Source Host           : localhost:3306
-Source Database       : sms_v0.2
+Source Database       : sms
 
 Target Server Type    : MYSQL
 Target Server Version : 50616
 File Encoding         : 65001
 
-Date: 2015-04-10 02:29:38
+Date: 2015-04-10 14:40:20
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -28,8 +28,8 @@ CREATE TABLE `attendance` (
   PRIMARY KEY (`id`),
   KEY `student_course_enrollment_id_fk` (`student_course_enrollment_id`),
   KEY `staff_id_fk3` (`taken_by`),
-  CONSTRAINT `staff_id_fk3` FOREIGN KEY (`taken_by`) REFERENCES `staff` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `student_course_enrollment_id_fk` FOREIGN KEY (`student_course_enrollment_id`) REFERENCES `student_course_enrollment` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `attendance_ibfk_3` FOREIGN KEY (`taken_by`) REFERENCES `staff` (`user_name`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `attendance_ibfk_2` FOREIGN KEY (`student_course_enrollment_id`) REFERENCES `student_course_enrollment` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
@@ -86,7 +86,7 @@ DROP TABLE IF EXISTS `course_schedule`;
 CREATE TABLE `course_schedule` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `course_id` int(11) NOT NULL,
-  `instructor_id` varchar(50) DEFAULT NULL,
+  `instructor_user_name` varchar(255) DEFAULT NULL,
   `status` tinyint(1) DEFAULT NULL,
   `term` varchar(25) DEFAULT NULL,
   `start_dtt` datetime DEFAULT NULL,
@@ -94,9 +94,9 @@ CREATE TABLE `course_schedule` (
   `room_no` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `course_fk` (`course_id`),
-  KEY `instructor_id_fk` (`instructor_id`),
-  CONSTRAINT `instructor_id_fk` FOREIGN KEY (`instructor_id`) REFERENCES `staff` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `course_fk` FOREIGN KEY (`course_id`) REFERENCES `course` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  KEY `instructor_id_fk` (`instructor_user_name`),
+  CONSTRAINT `course_schedule_ibfk_2` FOREIGN KEY (`instructor_user_name`) REFERENCES `staff` (`user_name`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `course_schedule_ibfk_1` FOREIGN KEY (`course_id`) REFERENCES `course` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
@@ -108,8 +108,8 @@ CREATE TABLE `course_schedule` (
 -- ----------------------------
 DROP TABLE IF EXISTS `person`;
 CREATE TABLE `person` (
+  `user_name` varchar(255) NOT NULL,
   `id` varchar(50) NOT NULL DEFAULT '',
-  `user_name` varchar(255) DEFAULT NULL,
   `f_name` varchar(255) DEFAULT NULL,
   `m_name` varchar(255) DEFAULT NULL,
   `l_name` varchar(255) DEFAULT NULL,
@@ -127,13 +127,13 @@ CREATE TABLE `person` (
   `joining_dtt` datetime DEFAULT NULL,
   `contact` int(11) DEFAULT NULL,
   `emr_contact` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY (`user_name`),
   KEY `user_name_fk` (`user_name`),
   KEY `contact_fk` (`contact`),
   KEY `emr_contact_fk` (`emr_contact`),
-  CONSTRAINT `contact_fk` FOREIGN KEY (`contact`) REFERENCES `contact` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `emr_contact_fk` FOREIGN KEY (`emr_contact`) REFERENCES `contact` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `user_name_fk` FOREIGN KEY (`user_name`) REFERENCES `user` (`user_name`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `user_name_ibfk3` FOREIGN KEY (`user_name`) REFERENCES `user` (`user_name`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `person_ibfk_1` FOREIGN KEY (`contact`) REFERENCES `contact` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `person_ibfk_2` FOREIGN KEY (`emr_contact`) REFERENCES `contact` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
@@ -180,13 +180,13 @@ CREATE TABLE `school_schedule` (
 -- ----------------------------
 DROP TABLE IF EXISTS `staff`;
 CREATE TABLE `staff` (
-  `id` varchar(50) NOT NULL,
+  `user_name` varchar(255) NOT NULL,
   `status` tinyint(1) DEFAULT NULL,
   `designation` varchar(255) DEFAULT NULL,
   `future_use` varchar(1000) DEFAULT NULL,
   `notes` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  CONSTRAINT `staff_ibfk_1` FOREIGN KEY (`id`) REFERENCES `person` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  PRIMARY KEY (`user_name`),
+  CONSTRAINT `staff_ibfk_1` FOREIGN KEY (`user_name`) REFERENCES `person` (`user_name`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
@@ -198,13 +198,13 @@ CREATE TABLE `staff` (
 -- ----------------------------
 DROP TABLE IF EXISTS `student`;
 CREATE TABLE `student` (
-  `id` varchar(50) NOT NULL,
+  `user_name` varchar(255) NOT NULL,
   `status` tinyint(1) DEFAULT NULL,
   `parent_email` varchar(255) DEFAULT NULL,
   `future_use` varchar(1000) DEFAULT NULL,
   `level` varchar(255) DEFAULT NULL COMMENT 'class name,grade_type',
-  PRIMARY KEY (`id`),
-  CONSTRAINT `student_id_fk` FOREIGN KEY (`id`) REFERENCES `person` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  PRIMARY KEY (`user_name`),
+  CONSTRAINT `student_ibfk_1` FOREIGN KEY (`user_name`) REFERENCES `person` (`user_name`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
@@ -218,16 +218,16 @@ DROP TABLE IF EXISTS `student_course_enrollment`;
 CREATE TABLE `student_course_enrollment` (
   `id` int(11) NOT NULL,
   `course_schedule_id` int(11) DEFAULT NULL,
-  `student_id` varchar(50) DEFAULT NULL,
+  `student_user_name` varchar(255) DEFAULT NULL,
   `enrolled_dtt` datetime DEFAULT NULL,
   `status` tinyint(1) DEFAULT NULL,
   `grade` varchar(10) DEFAULT NULL,
   `graded_dtt` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `course_schedule_id_fk` (`course_schedule_id`),
-  KEY `student_id_fk_2` (`student_id`),
-  CONSTRAINT `student_id_fk_2` FOREIGN KEY (`student_id`) REFERENCES `student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `course_schedule_id_fk` FOREIGN KEY (`course_schedule_id`) REFERENCES `course_schedule` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  KEY `student_id_fk_2` (`student_user_name`),
+  CONSTRAINT `student_course_enrollment_ibfk_2` FOREIGN KEY (`student_user_name`) REFERENCES `student` (`user_name`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `student_course_enrollment_ibfk_1` FOREIGN KEY (`course_schedule_id`) REFERENCES `course_schedule` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
