@@ -8,6 +8,6 @@ import edu.mc2.sms.jpa.entity.Person;
 
 public interface PersonRepository extends CrudRepository<Person,String>{
 
-	List<Person> findByLastName(String lastName);
+	List<Person> findByLName(String lName);
 	
 }
