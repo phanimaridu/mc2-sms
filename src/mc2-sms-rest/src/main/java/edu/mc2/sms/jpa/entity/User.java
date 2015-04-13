@@ -8,16 +8,18 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 
 /**
@@ -26,6 +28,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 @Entity
 @NamedQuery(name="User.findAll", query="SELECT u FROM User u")
+@Inheritance(strategy=InheritanceType.JOINED)
+@JsonSerialize(include=JsonSerialize.Inclusion.NON_DEFAULT)
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -34,34 +38,28 @@ public class User implements Serializable {
 	private String userName;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name="account_expire_ts")
-	private Date accountExpireTs;
+	@Column(name="account_expire_dtt")
+	private Date accountExpireDtt;
 
 	private byte active;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name="created_ts")
-	private Date createdTs;
+	@Column(name="credentials_expire_dtt")
+	private Date credentialsExpireDtt;
+
+	@Column(name="e_mail")
+	private String eMail;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name="credentials_expire_ts")
-	private Date credentialsExpireTs;
-
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name="last_access_ts")
-	private Date lastAccessTs;
-
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name="modified_ts")
-	private Date modifiedTs;
+	@Column(name="last_access_dtt")
+	private Date lastAccessDtt;
 
 	@JsonIgnore
 	private String password;
 
-	//bi-directional one-to-one association to Person
 	@JsonIgnore
-	@OneToOne(mappedBy="user")
-	private Person person;
+	@Column(name="password_salt")
+	private String passwordSalt;
 
 	//bi-directional many-to-many association to Role
 	@ManyToMany(fetch = FetchType.EAGER)
@@ -87,12 +85,12 @@ public class User implements Serializable {
 		this.userName = userName;
 	}
 
-	public Date getAccountExpireTs() {
-		return this.accountExpireTs;
+	public Date getAccountExpireDtt() {
+		return this.accountExpireDtt;
 	}
 
-	public void setAccountExpireTs(Date accountExpireTs) {
-		this.accountExpireTs = accountExpireTs;
+	public void setAccountExpireDtt(Date accountExpireDtt) {
+		this.accountExpireDtt = accountExpireDtt;
 	}
 
 	public byte getActive() {
@@ -103,36 +101,28 @@ public class User implements Serializable {
 		this.active = active;
 	}
 
-	public Date getCreatedTs() {
-		return this.createdTs;
+	public Date getCredentialsExpireDtt() {
+		return this.credentialsExpireDtt;
 	}
 
-	public void setCreatedTs(Date createdTs) {
-		this.createdTs = createdTs;
+	public void setCredentialsExpireDtt(Date credentialsExpireDtt) {
+		this.credentialsExpireDtt = credentialsExpireDtt;
 	}
 
-	public Date getCredentialsExpireTs() {
-		return this.credentialsExpireTs;
+	public String getEMail() {
+		return this.eMail;
 	}
 
-	public void setCredentialsExpireTs(Date credentialsExpireTs) {
-		this.credentialsExpireTs = credentialsExpireTs;
+	public void setEMail(String eMail) {
+		this.eMail = eMail;
 	}
 
-	public Date getLastAccessTs() {
-		return this.lastAccessTs;
+	public Date getLastAccessDtt() {
+		return this.lastAccessDtt;
 	}
 
-	public void setLastAccessTs(Date lastAccessTs) {
-		this.lastAccessTs = lastAccessTs;
-	}
-
-	public Date getModifiedTs() {
-		return this.modifiedTs;
-	}
-
-	public void setModifiedTs(Date modifiedTs) {
-		this.modifiedTs = modifiedTs;
+	public void setLastAccessDtt(Date lastAccessDtt) {
+		this.lastAccessDtt = lastAccessDtt;
 	}
 
 	@JsonIgnore
@@ -145,12 +135,12 @@ public class User implements Serializable {
 		this.password = password;
 	}
 
-	public Person getPerson() {
-		return this.person;
+	public String getPasswordSalt() {
+		return this.passwordSalt;
 	}
 
-	public void setPerson(Person person) {
-		this.person = person;
+	public void setPasswordSalt(String passwordSalt) {
+		this.passwordSalt = passwordSalt;
 	}
 
 	public List<Role> getRoles() {
@@ -161,4 +151,32 @@ public class User implements Serializable {
 		this.roles = roles;
 	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result
+				+ ((userName == null) ? 0 : userName.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		User other = (User) obj;
+		if (userName == null) {
+			if (other.userName != null)
+				return false;
+		} else if (!userName.equals(other.userName))
+			return false;
+		return true;
+	}
+
+	
+	
 }
