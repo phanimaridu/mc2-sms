@@ -22,6 +22,7 @@ public class UserRepositoryTest {
 	private UserRepository userDAO;
 	
 	
+	
 	@BeforeClass
 	public  static void beforeClass() {
 
@@ -45,7 +46,9 @@ public class UserRepositoryTest {
 	
 	@Test
 	public void test() {
-		System.out.println(">>>>>>>>>>>>>>" + userDAO.count());
+		//System.out.println(">>>>>>>>>>>>>>" + userDAO.count());
+		//System.out.println(">>>>>>>>>>>>>>" +service.getAttendanceReport(1, null, null));
+		
 	}
 
 }
