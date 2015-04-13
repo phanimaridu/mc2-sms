@@ -1,3 +1,5 @@
+GET /public/whoami
+
 
 GET
 ---
@@ -31,37 +33,32 @@ Date	Wed, 08 Apr 2015 23:21:58 GMT
 Response Body
 -------------
 {
-  "userName": "phanimaridu",
-  "address": "1700 E,13 ST,APT 5R",
-  "firstName": "Venkata",
-  "futureUse": "",
-  "lastName": "Maridu",
-  "phone": "001 216-820-3556",
-  "sex": "M",
-  "user": {
-    "userName": "phanimaridu",
-    "accountExpireTs": null,
-    "active": 1,
-    "createdTs": 1423880820000,
-    "credentialsExpireTs": null,
-    "lastAccessTs": 1423880826000,
-    "modifiedTs": 1423880823000,
-    "roles": [
-      {
-        "id": 1,
-        "name": "ROLE_ADMIN"
-      },
-      {
-        "id": 2,
-        "name": "ROLE_STAFF"
-      },
-      {
-        "id": 3,
-        "name": "ROLE_STUDENT"
-      }
-    ]
-  },
-  "email": "phani.vjec@gmail.com"
+  "userName": "admin",
+  "active": 1,
+  "lastAccessDtt": 1428697645000,
+  "roles": [
+    {
+      "id": 1,
+      "name": "ROLE_ADMIN"
+    }
+  ],
+  "dob": 615072543000,
+  "eyeColor": 1,
+  "hairColor": 1,
+  "height": 5.9,
+  "id": "12133133",
+  "joiningDtt": 1405632618000,
+  "prefix": "Mr",
+  "race": "indian",
+  "sex": 1,
+  "ssn": 123456789,
+  "weight": 190,
+  "designation": "",
+  "status": 1,
+  "fname": "Venkat",
+  "lname": "Maridu",
+  "mname": "SPS",
+  "email": "admin@mc2-sms.edu"
 }
 
 

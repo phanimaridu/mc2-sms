@@ -1,0 +1,3782 @@
+GET /attendance_report?courseScheduleId=1
+
+
+REQUEST HEADERS
+---------------
+(Request-Line)	GET /attendance_report?courseScheduleId=1 HTTP/1.1
+Host	localhost:8081
+User-Agent	Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0
+Accept	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language	null
+Accept-Encoding	gzip, deflate
+Cookie	JSESSIONID=FDEED7962911F18DB5E0F1CE2C17110D
+Authorization	Basic YWRtaW46cGFzc3dvcmQ=
+
+
+REQUEST BODY
+------------
+
+{
+  "courseSheduleId": 1,
+  "totalNoOfClasses": 45,
+  "studentAttendance": {
+    "ivor.dejesus;ivor;;dejesus": [
+      {
+        "takenDtt": 1428953677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429040077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429126477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429212877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429299277000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429385677000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429472077000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429558477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429644877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429731277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429817677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429904077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429990477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430076877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430163277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430249677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430336077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430422477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430508877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430595277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430681677000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430768077000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430854477000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430940877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431027277000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431113677000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431200077000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431286477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431372877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431459277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431545677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431632077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431718477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431804877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431891277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431977677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432064077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432150477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1432236877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432323277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432409677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432496077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432582477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1432668877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432755277000,
+        "status": 1
+      }
+    ],
+    "perry.pickett;perry;;pickett": [
+      {
+        "takenDtt": 1428953677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429040077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429126477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429212877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429299277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429385677000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429472077000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429558477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429644877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429731277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429817677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429904077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429990477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430076877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430163277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430249677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430336077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430422477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430508877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430595277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430681677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430768077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430854477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430940877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431027277000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431113677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431200077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431286477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431372877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431459277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431545677000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431632077000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431718477000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431804877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431891277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431977677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432064077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432150477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432236877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1432323277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432409677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432496077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432582477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1432668877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432755277000,
+        "status": 1
+      }
+    ],
+    "jarrod.burch;jarrod;;burch": [
+      {
+        "takenDtt": 1428953677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429040077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429126477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429212877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429299277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429385677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429472077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429558477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429644877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429731277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429817677000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429904077000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429990477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430076877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430163277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430249677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430336077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430422477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430508877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430595277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430681677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430768077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430854477000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430940877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431027277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431113677000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431200077000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431286477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431372877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431459277000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431545677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431632077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431718477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431804877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431891277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431977677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432064077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432150477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432236877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432323277000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432409677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1432496077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432582477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432668877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432755277000,
+        "status": 2
+      }
+    ],
+    "gannon.pierce;gannon;;pierce": [
+      {
+        "comment": "Absent",
+        "takenDtt": 1428953677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429040077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429126477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429212877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429299277000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429385677000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429472077000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429558477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429644877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429731277000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429817677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429904077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429990477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430076877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430163277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430249677000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430336077000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430422477000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430508877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430595277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430681677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430768077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430854477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430940877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431027277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431113677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431200077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431286477000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431372877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431459277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431545677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431632077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431718477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431804877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431891277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431977677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432064077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432150477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432236877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432323277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1432409677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432496077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432582477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432668877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432755277000,
+        "status": 2
+      }
+    ],
+    "jamal.guzman;jamal;;guzman": [
+      {
+        "takenDtt": 1428953677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429040077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429126477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429212877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429299277000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429385677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429472077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429558477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429644877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429731277000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429817677000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429904077000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429990477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430076877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430163277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430249677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430336077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430422477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430508877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430595277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430681677000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430768077000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430854477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430940877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431027277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431113677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431200077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431286477000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431372877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431459277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431545677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431632077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431718477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431804877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431891277000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431977677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1432064077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432150477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432236877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432323277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1432409677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432496077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432582477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432668877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432755277000,
+        "status": 1
+      }
+    ],
+    "lee.stanton;lee;;stanton": [
+      {
+        "comment": "Absent",
+        "takenDtt": 1428953677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429040077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429126477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429212877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429299277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429385677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429472077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429558477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429644877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429731277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429817677000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429904077000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429990477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430076877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430163277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430249677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430336077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430422477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430508877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430595277000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430681677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430768077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430854477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430940877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431027277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431113677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431200077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431286477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431372877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431459277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431545677000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431632077000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431718477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431804877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431891277000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431977677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1432064077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432150477000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432236877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1432323277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432409677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432496077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432582477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432668877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432755277000,
+        "status": 2
+      }
+    ],
+    "vaughan.white;vaughan;;white": [
+      {
+        "comment": "Absent",
+        "takenDtt": 1428953677000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429040077000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429126477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429212877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429299277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429385677000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429472077000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429558477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429644877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429731277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429817677000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429904077000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429990477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430076877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430163277000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430249677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430336077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430422477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430508877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430595277000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430681677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430768077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430854477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430940877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431027277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431113677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431200077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431286477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431372877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431459277000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431545677000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431632077000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431718477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431804877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431891277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431977677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432064077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432150477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432236877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432323277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1432409677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432496077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432582477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432668877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432755277000,
+        "status": 1
+      }
+    ],
+    "noble.keller;noble;;keller": [
+      {
+        "takenDtt": 1428953677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429040077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429126477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429212877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429299277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429385677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429472077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429558477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429644877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429731277000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429817677000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429904077000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429990477000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430076877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430163277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430249677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430336077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430422477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430508877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430595277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430681677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430768077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430854477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430940877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431027277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431113677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431200077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431286477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431372877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431459277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431545677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431632077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431718477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431804877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431891277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431977677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432064077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432150477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432236877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432323277000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432409677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1432496077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432582477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432668877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432755277000,
+        "status": 2
+      }
+    ],
+    "curran.roach;curran;;roach": [
+      {
+        "comment": "Absent",
+        "takenDtt": 1428953677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429040077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429126477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429212877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429299277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429385677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429472077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429558477000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429644877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429731277000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429817677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429904077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429990477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430076877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430163277000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430249677000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430336077000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430422477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430508877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430595277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430681677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430768077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430854477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430940877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431027277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431113677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431200077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431286477000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431372877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431459277000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431545677000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431632077000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431718477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431804877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431891277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431977677000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432064077000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1432150477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432236877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432323277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1432409677000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432496077000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432582477000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432668877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432755277000,
+        "status": 2
+      }
+    ],
+    "bruno.noble;bruno;;noble": [
+      {
+        "takenDtt": 1428953677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429040077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429126477000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429212877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429299277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429385677000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429472077000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429558477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429644877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429731277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429817677000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429904077000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429990477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430076877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430163277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430249677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430336077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430422477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430508877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430595277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430681677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430768077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430854477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430940877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431027277000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431113677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431200077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431286477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431372877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431459277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431545677000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431632077000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431718477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431804877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431891277000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431977677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1432064077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432150477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432236877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432323277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432409677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432496077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432582477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432668877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432755277000,
+        "status": 1
+      }
+    ],
+    "nathan.ochoa;nathan;;ochoa": [
+      {
+        "takenDtt": 1428953677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429040077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429126477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429212877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429299277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429385677000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429472077000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429558477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429644877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429731277000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429817677000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429904077000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429990477000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430076877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430163277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430249677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430336077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430422477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430508877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430595277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430681677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430768077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430854477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430940877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431027277000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431113677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431200077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431286477000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431372877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431459277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431545677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431632077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431718477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431804877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431891277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431977677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432064077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432150477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432236877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432323277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432409677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432496077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432582477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432668877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432755277000,
+        "status": 1
+      }
+    ],
+    "ray.cantrell;ray;;cantrell": [
+      {
+        "takenDtt": 1428953677000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429040077000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429126477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429212877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429299277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429385677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429472077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429558477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429644877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429731277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429817677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429904077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429990477000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430076877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430163277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430249677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430336077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430422477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430508877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430595277000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430681677000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430768077000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430854477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430940877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431027277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431113677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431200077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431286477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431372877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431459277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431545677000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431632077000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431718477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431804877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431891277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431977677000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432064077000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1432150477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432236877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432323277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1432409677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432496077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432582477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432668877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432755277000,
+        "status": 1
+      }
+    ],
+    "otto.stephenson;otto;;stephenson": [
+      {
+        "takenDtt": 1428953677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429040077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429126477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429212877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429299277000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429385677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429472077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429558477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429644877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429731277000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429817677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429904077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429990477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430076877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430163277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430249677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430336077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430422477000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430508877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430595277000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430681677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430768077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430854477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430940877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431027277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431113677000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431200077000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431286477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431372877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431459277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431545677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431632077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431718477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431804877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431891277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431977677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432064077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432150477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1432236877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432323277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432409677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432496077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432582477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1432668877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432755277000,
+        "status": 1
+      }
+    ],
+    "neil.poole;neil;;poole": [
+      {
+        "takenDtt": 1428953677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429040077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429126477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429212877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429299277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429385677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429472077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429558477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429644877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429731277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429817677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429904077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429990477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430076877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430163277000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430249677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430336077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430422477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430508877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430595277000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430681677000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430768077000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430854477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430940877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431027277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431113677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431200077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431286477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431372877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431459277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431545677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431632077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431718477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431804877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431891277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431977677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432064077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432150477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432236877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432323277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1432409677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432496077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432582477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1432668877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432755277000,
+        "status": 1
+      }
+    ],
+    "perry.montgomery;Sosa;;montgomery": [
+      {
+        "comment": "Absent",
+        "takenDtt": 1428953677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429040077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429126477000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429212877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429299277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429385677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429472077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429558477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429644877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429731277000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429817677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429904077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429990477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430076877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430163277000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430249677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430336077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430422477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430508877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430595277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430681677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430768077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430854477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430940877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431027277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431113677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431200077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431286477000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431372877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431459277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431545677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431632077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431718477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431804877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431891277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431977677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432064077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432150477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432236877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432323277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432409677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432496077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432582477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1432668877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432755277000,
+        "status": 1
+      }
+    ],
+    "brock.sosa;Sosa;;Brock": [
+      {
+        "takenDtt": 1428953677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429040077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429126477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429212877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429299277000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429385677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429472077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429558477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429644877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429731277000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429817677000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429904077000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429990477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430076877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430163277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430249677000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430336077000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430422477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430508877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430595277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430681677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430768077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430854477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430940877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431027277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431113677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431200077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431286477000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431372877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431459277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431545677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431632077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431718477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431804877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431891277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431977677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432064077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432150477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432236877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432323277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432409677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432496077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432582477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432668877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1432755277000,
+        "status": 1
+      }
+    ],
+    "evan.fitzpatrick;evan;;fitzpatrick": [
+      {
+        "takenDtt": 1428953677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429040077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429126477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429212877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429299277000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429385677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429472077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429558477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429644877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429731277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429817677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429904077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429990477000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430076877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430163277000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430249677000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430336077000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430422477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430508877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430595277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430681677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430768077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430854477000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430940877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431027277000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431113677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431200077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431286477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431372877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431459277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431545677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431632077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431718477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431804877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431891277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431977677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432064077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432150477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432236877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432323277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432409677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432496077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432582477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432668877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432755277000,
+        "status": 1
+      }
+    ],
+    "ethan.flores;ethan;;flores": [
+      {
+        "takenDtt": 1428953677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429040077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429126477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429212877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429299277000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429385677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429472077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429558477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429644877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429731277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429817677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429904077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429990477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430076877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430163277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430249677000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430336077000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430422477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430508877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430595277000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430681677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430768077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430854477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430940877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431027277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431113677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431200077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431286477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431372877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431459277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431545677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431632077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431718477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431804877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431891277000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431977677000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432064077000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1432150477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432236877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432323277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432409677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432496077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432582477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432668877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432755277000,
+        "status": 1
+      }
+    ],
+    "walter.kaufman;walter;;kaufman": [
+      {
+        "comment": "Absent",
+        "takenDtt": 1428953677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429040077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429126477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429212877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429299277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429385677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429472077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429558477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429644877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1429731277000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1429817677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429904077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1429990477000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430076877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430163277000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430249677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430336077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430422477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1430508877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430595277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430681677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1430768077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430854477000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1430940877000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431027277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431113677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431200077000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431286477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431372877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1431459277000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431545677000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431632077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431718477000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1431804877000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431891277000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1431977677000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432064077000,
+        "status": 2
+      },
+      {
+        "takenDtt": 1432150477000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432236877000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432323277000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432409677000,
+        "status": 1
+      },
+      {
+        "takenDtt": 1432496077000,
+        "status": 1
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432582477000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432668877000,
+        "status": 2
+      },
+      {
+        "comment": "Absent",
+        "takenDtt": 1432755277000,
+        "status": 2
+      }
+    ]
+  },
+  "classesPresent": {
+    "perry.pickett;perry;;pickett": 30,
+    "ivor.dejesus;ivor;;dejesus": 27,
+    "jarrod.burch;jarrod;;burch": 31,
+    "gannon.pierce;gannon;;pierce": 23,
+    "jamal.guzman;jamal;;guzman": 29,
+    "lee.stanton;lee;;stanton": 32,
+    "vaughan.white;vaughan;;white": 29,
+    "noble.keller;noble;;keller": 33,
+    "bruno.noble;bruno;;noble": 32,
+    "curran.roach;curran;;roach": 24,
+    "nathan.ochoa;nathan;;ochoa": 31,
+    "ray.cantrell;ray;;cantrell": 31,
+    "otto.stephenson;otto;;stephenson": 33,
+    "neil.poole;neil;;poole": 31,
+    "perry.montgomery;Sosa;;montgomery": 32,
+    "brock.sosa;Sosa;;Brock": 32,
+    "walter.kaufman;walter;;kaufman": 29,
+    "ethan.flores;ethan;;flores": 34,
+    "evan.fitzpatrick;evan;;fitzpatrick": 33
+  }
+}

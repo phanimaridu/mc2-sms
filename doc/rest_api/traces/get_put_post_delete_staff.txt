@@ -1,0 +1,70 @@
+
+------------
+GET - {NAME}
+------------
+
+
+Request Headers
+---------------
+
+
+Response Headers
+----------------
+
+
+Response
+--------
+
+
+
+
+-----
+POST
+-----
+
+Request Headers
+---------------
+
+
+
+Request Body
+------------
+
+
+Response Headers
+----------------
+
+
+
+
+
+-----
+PUT
+-----
+
+Request Headers
+---------------
+
+
+Request Body
+------------
+
+
+Response Headers
+----------------
+
+
+------
+DELETE
+------
+
+Request Headers
+---------------
+
+
+Response Headers
+----------------
+
+
+
+

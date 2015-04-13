@@ -1,0 +1,192 @@
+POST /attendance/list
+
+Note : Make sure you submit all student attendance related the course schedule
+	   otherwise bad request will be thrown from server.
+
+Request Headers
+----------------
+(Request-Line)	POST /attendance/list HTTP/1.1
+Host	localhost:8081
+User-Agent	Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0
+Accept	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language	null
+Accept-Encoding	gzip, deflate
+Content-Type	application/json; charset=UTF-8
+Content-Length	2533
+Cookie	JSESSIONID=42692511A5235144086C6A65A26AB392
+Authorization	Basic YWRtaW46cGFzc3dvcmQ=
+Connection	keep-alive
+Pragma	no-cache
+Cache-Control	no-cache
+
+
+Response Headers
+----------------
+(Status-Line)	HTTP/1.1 201 Created
+Server	Apache-Coyote/1.1
+x-content-type-options	nosniff
+x-xss-protection	1; mode=block
+Cache-Control	no-cache, no-store, max-age=0, must-revalidate
+Pragma	no-cache
+Expires	0
+X-Frame-Options	DENY
+Content-Length	0
+Date	Mon, 13 Apr 2015 21:18:45 GMT
+
+
+POST BODY
+---------
+[
+  {
+    "takenDtt": 1428789623000,
+    "status": 1,
+    "studentCourseEnrollment": {
+      "id": 1
+    }
+  },
+  {
+    "takenDtt": 1428789654000,
+    "status": 1,
+    "studentCourseEnrollment": {
+      "id": 4
+    }
+  },
+  {
+    "comment": "Absent",
+    "takenDtt": 1428791640000,
+    "status": 2,
+    "studentCourseEnrollment": {
+      "id": 7
+    }
+  },
+  {
+    "comment": "Absent",
+    "takenDtt": 1428791640000,
+    "status": 2,
+    "studentCourseEnrollment": {
+      "id": 10
+    }
+  },
+  {
+    "comment": "Absent",
+    "takenDtt": 1428791640000,
+    "status": 2,
+    "studentCourseEnrollment": {
+      "id": 13
+    }
+  },
+  {
+    "comment": "Absent",
+    "takenDtt": 1428791640000,
+    "status": 2,
+    "studentCourseEnrollment": {
+      "id": 16
+    }
+  },
+  {
+    "comment": "Absent",
+    "takenDtt": 1428791640000,
+    "status": 2,
+    "studentCourseEnrollment": {
+      "id": 19
+    }
+  },
+  {
+    "comment": "Absent",
+    "takenDtt": 1428791640000,
+    "status": 2,
+    "studentCourseEnrollment": {
+      "id": 22
+    }
+  },
+  {
+    "comment": "Absent",
+    "takenDtt": 1428791640000,
+    "status": 2,
+    "studentCourseEnrollment": {
+      "id": 25
+    }
+  },
+  {
+    "comment": "Absent",
+    "takenDtt": 1428791640000,
+    "status": 2,
+    "studentCourseEnrollment": {
+      "id": 28
+    }
+  },
+  {
+    "comment": "Absent",
+    "takenDtt": 1428791640000,
+    "status": 2,
+    "studentCourseEnrollment": {
+      "id": 31
+    }
+  },
+  {
+    "comment": "Absent",
+    "takenDtt": 1428791640000,
+    "status": 2,
+    "studentCourseEnrollment": {
+      "id": 34
+    }
+  },
+  {
+    "comment": "Absent",
+    "takenDtt": 1428791640000,
+    "status": 2,
+    "studentCourseEnrollment": {
+      "id": 37
+    }
+  },
+  {
+    "comment": "Absent",
+    "takenDtt": 1428791640000,
+    "status": 2,
+    "studentCourseEnrollment": {
+      "id": 40
+    }
+  },
+  {
+    "comment": "Absent",
+    "takenDtt": 1428791640000,
+    "status": 2,
+    "studentCourseEnrollment": {
+      "id": 43
+    }
+  },
+  {
+    "comment": "Absent",
+    "takenDtt": 1428791640000,
+    "status": 2,
+    "studentCourseEnrollment": {
+      "id": 46
+    }
+  },
+  {
+    "comment": "Absent",
+    "takenDtt": 1428791640000,
+    "status": 2,
+    "studentCourseEnrollment": {
+      "id": 49
+    }
+  },
+  {
+    "comment": "Absent",
+    "takenDtt": 1428791640000,
+    "status": 2,
+    "studentCourseEnrollment": {
+      "id": 52
+    }
+  },
+  {
+    "comment": "Absent",
+    "takenDtt": 1428791640000,
+    "status": 2,
+    "studentCourseEnrollment": {
+      "id": 55
+    }
+  }
+]
+
+ 
