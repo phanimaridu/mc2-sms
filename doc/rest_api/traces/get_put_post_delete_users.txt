@@ -1,0 +1,234 @@
+
+------------
+GET - {NAME}
+------------
+
+
+Request Headers
+---------------
+(Request-Line)	GET /staff/admin HTTP/1.1
+Host	localhost:8081
+User-Agent	Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0
+Accept	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language	null
+Accept-Encoding	gzip, deflate
+Content-Type	application/json
+Cookie	JSESSIONID=86125F83E39D2CB9C68D5293E672FC71
+Authorization	Basic YWRtaW46cGFzc3dvcmQ=
+Connection	keep-alive
+
+Response Headers
+----------------
+(Status-Line)	HTTP/1.1 200 OK
+Server	Apache-Coyote/1.1
+x-content-type-options	nosniff
+x-xss-protection	1; mode=block
+Cache-Control	no-cache, no-store, max-age=0, must-revalidate
+Pragma	no-cache
+Expires	0
+X-Frame-Options	DENY
+Content-Type	application/json;charset=UTF-8
+Transfer-Encoding	chunked
+Date	Mon, 13 Apr 2015 22:00:03 GMT
+
+Response
+--------
+{
+  "userName": "admin",
+  "active": 1,
+  "lastAccessDtt": 1428697645000,
+  "roles": [
+    {
+      "id": 1,
+      "name": "ROLE_ADMIN"
+    }
+  ],
+  "dob": 615072543000,
+  "eyeColor": 1,
+  "hairColor": 1,
+  "height": 5.9,
+  "id": "12133133",
+  "joiningDtt": 1405632618000,
+  "prefix": "Mr",
+  "race": "indian",
+  "sex": 1,
+  "ssn": 123456789,
+  "weight": 190,
+  "designation": "",
+  "status": 1,
+  "fname": "Venkat",
+  "mname": "SPS",
+  "lname": "Maridu",
+  "email": "admin@mc2-sms.edu"
+}
+
+
+
+-----
+POST
+-----
+
+Request Headers
+---------------
+(Request-Line)	POST /staff HTTP/1.1
+Host	localhost:8081
+User-Agent	Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0
+Accept	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language	null
+Accept-Encoding	gzip, deflate
+Content-Type	application/json; charset=UTF-8
+Content-Length	509
+Cookie	JSESSIONID=86125F83E39D2CB9C68D5293E672FC71
+Authorization	Basic YWRtaW46cGFzc3dvcmQ=
+Connection	keep-alive
+Pragma	no-cache
+Cache-Control	no-cache
+
+Response Headers
+----------------
+(Status-Line)	HTTP/1.1 201 Created
+Server	Apache-Coyote/1.1
+x-content-type-options	nosniff
+x-xss-protection	1; mode=block
+Cache-Control	no-cache, no-store, max-age=0, must-revalidate
+Pragma	no-cache
+Expires	0
+X-Frame-Options	DENY
+Location	http://localhost:8081/staff/admin2
+Content-Length	0
+Date	Mon, 13 Apr 2015 22:03:08 GMT
+
+Request Body
+------------
+{
+  "userName": "admin2",
+   "password":"123",
+  "active": 1,
+  "lastAccessDtt": 1428697645000,
+  "roles": [
+    {
+      "id": 1,
+      "name": "ROLE_ADMIN"
+    }
+  ],
+  "dob": 615072543000,
+  "eyeColor": 1,
+  "hairColor": 1,
+  "height": 5.9,
+  "id": "12133133",
+  "joiningDtt": 1405632618000,
+  "prefix": "Mr",
+  "race": "indian",
+  "sex": 1,
+  "ssn": 123456789,
+  "weight": 190,
+  "designation": "",
+  "status": 1,
+  "fname": "Venkat",
+  "mname": "SPS",
+  "lname": "Maridu",
+  "email": "admin@mc2-sms.edu"
+}
+
+
+
+
+
+-----
+PUT
+-----
+
+Request Headers
+---------------
+(Request-Line)	PUT /staff/admin2 HTTP/1.1
+Host	localhost:8081
+User-Agent	Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0
+Accept	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language	null
+Accept-Encoding	gzip, deflate
+Content-Type	application/json; charset=UTF-8
+Content-Length	514
+Cookie	JSESSIONID=86125F83E39D2CB9C68D5293E672FC71
+Authorization	Basic YWRtaW46cGFzc3dvcmQ=
+Connection	keep-alive
+
+Response Headers
+----------------
+(Status-Line)	HTTP/1.1 202 Accepted
+Server	Apache-Coyote/1.1
+x-content-type-options	nosniff
+x-xss-protection	1; mode=block
+Cache-Control	no-cache, no-store, max-age=0, must-revalidate
+Pragma	no-cache
+Expires	0
+X-Frame-Options	DENY
+Content-Length	0
+Date	Mon, 13 Apr 2015 22:06:31 GMT
+
+Request Body
+------------
+{
+  "userName": "admin2",
+   "password":"123",
+  "active": 1,
+  "lastAccessDtt": 1428697645000,
+  "roles": [
+    {
+      "id": 1,
+      "name": "ROLE_ADMIN"
+    }
+  ],
+  "dob": 615072543000,
+  "eyeColor": 1,
+  "hairColor": 1,
+  "height": 5.9,
+  "id": "12133133",
+  "joiningDtt": 1405632618000,
+  "prefix": "Mr",
+  "race": "indian",
+  "sex": 1,
+  "ssn": 123456789,
+  "weight": 190,
+  "designation": "",
+  "status": 1,
+  "fname": "Venkat",
+  "mname": "Srinivas",
+  "lname": "Maridu",
+  "email": "admin@mc2-sms.edu"
+}
+
+
+
+------
+DELETE
+------
+
+Request Headers
+---------------
+(Request-Line)	DELETE /staff/admin2 HTTP/1.1
+Host	localhost:8081
+User-Agent	Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0
+Accept	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language	null
+Accept-Encoding	gzip, deflate
+Content-Type	application/json; charset=UTF-8
+Content-Length	514
+Cookie	JSESSIONID=86125F83E39D2CB9C68D5293E672FC71
+Authorization	Basic YWRtaW46cGFzc3dvcmQ=
+Connection	keep-alive
+
+Response Headers
+----------------
+(Status-Line)	HTTP/1.1 200 OK
+Server	Apache-Coyote/1.1
+x-content-type-options	nosniff
+x-xss-protection	1; mode=block
+Cache-Control	no-cache, no-store, max-age=0, must-revalidate
+Pragma	no-cache
+Expires	0
+X-Frame-Options	DENY
+Content-Length	0
+Date	Mon, 13 Apr 2015 22:07:58 GMT
+
+
+

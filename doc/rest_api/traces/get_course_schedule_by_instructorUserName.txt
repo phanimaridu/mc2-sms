@@ -1,0 +1,129 @@
+GET /course_schedule?instructorUserName=<instructorUserName>
+GET /course_schedule/min?instructorUserName=<instructorUserName>
+
+
+GET
+---
+
+Request Headers
+---------------
+(Request-Line)	GET /course_schedule?instructorUserName=physics_teacher HTTP/1.1
+Host	localhost:8081
+User-Agent	Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0
+Accept	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language	null
+Accept-Encoding	gzip, deflate
+Content-Type	application/json
+Cookie	JSESSIONID=86125F83E39D2CB9C68D5293E672FC71
+Authorization	Basic YWRtaW46cGFzc3dvcmQ=
+Connection	keep-alive
+
+Response Headers
+-----------------
+(Status-Line)	HTTP/1.1 200 OK
+Server	Apache-Coyote/1.1
+x-content-type-options	nosniff
+x-xss-protection	1; mode=block
+Cache-Control	no-cache, no-store, max-age=0, must-revalidate
+Pragma	no-cache
+Expires	0
+X-Frame-Options	DENY
+Content-Type	application/json;charset=UTF-8
+Transfer-Encoding	chunked
+Date	Mon, 13 Apr 2015 22:16:18 GMT
+
+Response Body
+-------------
+[
+  {
+    "id": 1,
+    "startDt": "2015-01-12",
+    "endDt": "2015-05-09",
+    "startTime": "16:00:00",
+    "endTime": "18:00:00",
+    "roomNo": "BU 102",
+    "status": 1,
+    "term": "spring",
+    "futureUse": "MN,WE",
+    "staff": {
+      "userName": "physics_teacher",
+      "active": 1,
+      "lastAccessDtt": 1428697830000,
+      "roles": [
+        {
+          "id": 2,
+          "name": "ROLE_STAFF"
+        }
+      ],
+      "dob": 615072543000,
+      "eyeColor": 1,
+      "hairColor": 1,
+      "height": 5.9,
+      "id": "12133133",
+      "joiningDtt": 1405632618000,
+      "prefix": "Mr",
+      "sex": 1,
+      "ssn": 123456789,
+      "weight": 190,
+      "status": 1,
+      "fname": "Ken",
+      "mname": "B",
+      "lname": "Watson",
+      "email": "physics_teacher@mc2-sms.edu"
+    },
+    "course": {
+      "id": 1,
+      "academicYear": "2015-04-10",
+      "credits": 3,
+      "dept": "Physics",
+      "name": "Physics K10"
+    }
+  }
+]
+
+
+
+
+
+GET
+---
+
+Request Headers
+---------------
+(Request-Line)	GET /course_schedule/min?instructorUserName=physics_teacher HTTP/1.1
+Host	localhost:8081
+User-Agent	Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0
+Accept	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language	null
+Accept-Encoding	gzip, deflate
+Content-Type	application/json
+Cookie	JSESSIONID=86125F83E39D2CB9C68D5293E672FC71
+Authorization	Basic YWRtaW46cGFzc3dvcmQ=
+Connection	keep-alive
+
+Response Headers
+-----------------
+(Status-Line)	HTTP/1.1 200 OK
+Server	Apache-Coyote/1.1
+x-content-type-options	nosniff
+x-xss-protection	1; mode=block
+Cache-Control	no-cache, no-store, max-age=0, must-revalidate
+Pragma	no-cache
+Expires	0
+X-Frame-Options	DENY
+Content-Type	application/json;charset=UTF-8
+Transfer-Encoding	chunked
+Date	Mon, 13 Apr 2015 22:13:18 GMT
+
+Response Body
+-------------
+[
+  {
+    "id": 2,
+    "course": {
+      "id": 2,
+      "name": "Math K10"
+    }
+  }
+]
+

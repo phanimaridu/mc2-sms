@@ -1,0 +1,8 @@
+GET,POST,DELETE /staff
+GET,PUT /staff/{userName}
+GET /public/whoami
+GET /course_schedule
+GET /course_schedule/min
+GET /course_schedule?instructorUserName=<instructorUserName>
+GET /course_schedule/min?instructorUserName=<instructorUserName>
+GET /student_course_enrollment/min?courseScheduleId=<courseScheduleId>

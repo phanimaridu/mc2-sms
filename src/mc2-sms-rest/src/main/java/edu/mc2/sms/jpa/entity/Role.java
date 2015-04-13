@@ -19,13 +19,14 @@ public class Role implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 
 	private String name;
 
 	//bi-directional many-to-many association to User
-	@JsonIgnore
 	@ManyToMany(mappedBy="roles")
+	@JsonIgnore
 	private List<User> users;
 
 	public Role() {

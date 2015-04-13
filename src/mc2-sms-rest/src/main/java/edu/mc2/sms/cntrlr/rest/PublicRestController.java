@@ -1,7 +1,6 @@
-package edu.mc2.sms.cntrlr.rest.common;
+package edu.mc2.sms.cntrlr.rest;
 
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.http.HttpStatus;
@@ -12,11 +11,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import edu.mc2.sms.excepion.rest.InternalServerError;
-import edu.mc2.sms.excepion.rest.ResourceNotFoundException;
 import edu.mc2.sms.jpa.entity.Person;
 import edu.mc2.sms.jpa.repository.PersonRepository;
 
-
+//TODO:Move Logics to Service Layer
 @RestController
 @RequestMapping("/public")
 public class PublicRestController {
@@ -44,14 +42,5 @@ public class PublicRestController {
 		
 	}
 	
-	
-
-	
-	
-	/*
-	 * @RequestMapping(method = RequestMethod.GET) 
-	 * public User find(@RequestParam(value = "name", required = true) String name) 
-	 * { return  userDAO.find(name); }
-	 */
 
 }

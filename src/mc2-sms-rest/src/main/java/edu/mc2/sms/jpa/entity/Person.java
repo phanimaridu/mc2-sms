@@ -1,119 +1,241 @@
 package edu.mc2.sms.jpa.entity;
 
 import java.io.Serializable;
-import javax.persistence.*;
+import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 /**
  * The persistent class for the person database table.
  * 
  */
 @Entity
-@NamedQuery(name="Person.findAll", query="SELECT p FROM Person p")
-public class Person implements Serializable {
+@NamedQuery(name = "Person.findAll", query = "SELECT p FROM Person p")
+@PrimaryKeyJoinColumn(name = "user_name")
+@JsonSerialize(include=JsonSerialize.Inclusion.NON_DEFAULT)
+public class Person extends User implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	@Id
-	@Column(name="user_name")
-	private String userName;
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date dob;
 
-	private String address;
+	@Column(name = "eye_color")
+	private Byte eyeColor;
 
-	@Column(name="e_mail")
-	private String eMail;
+	@Column(name = "f_name")
+	private String fName;
 
-	@Column(name="first_name")
-	private String firstName;
+	@Column(name = "hair_color")
+	private Byte hairColor;
 
-	@Lob
-	@Column(name="future_use")
-	private String futureUse;
+	private Float height;
 
-	@Column(name="last_name")
-	private String lastName;
+	private String id;
 
-	private String phone;
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "joining_dtt")
+	private Date joiningDtt;
 
-	private String sex;
+	@Column(name = "l_name")
+	private String lName;
 
-	//bi-directional one-to-one association to User
-	@OneToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name="user_name")
-	private User user;
+	@Column(name = "m_name")
+	private String mName;
+
+	@Column(name = "picture_uri")
+	private String pictureUri;
+
+	private String prefix;
+
+	private String race;
+
+	private Byte sex;
+
+	private Integer ssn;
+
+	private String suffix;
+
+	private Float weight;
+
+	//many-to-one association to Contact
+	@ManyToOne
+	@JoinColumn(name = "contact")
+	private Contact contact;
+
+	//many-to-one association to Contact
+	@ManyToOne
+	@JoinColumn(name = "emr_contact")
+	private Contact emrContact;
 
 	public Person() {
 	}
 
-	public String getUserName() {
-		return this.userName;
+	public Date getDob() {
+		return this.dob;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setDob(Date dob) {
+		this.dob = dob;
 	}
 
-	public String getAddress() {
-		return this.address;
+
+	public String getFName() {
+		return this.fName;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+	public void setFName(String fName) {
+		this.fName = fName;
 	}
 
-	public String getEMail() {
-		return this.eMail;
+
+	public String getId() {
+		return this.id;
 	}
 
-	public void setEMail(String eMail) {
-		this.eMail = eMail;
+	public void setId(String id) {
+		this.id = id;
 	}
 
-	public String getFirstName() {
-		return this.firstName;
+	public Date getJoiningDtt() {
+		return this.joiningDtt;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setJoiningDtt(Date joiningDtt) {
+		this.joiningDtt = joiningDtt;
 	}
 
-	public String getFutureUse() {
-		return this.futureUse;
+	public String getLName() {
+		return this.lName;
 	}
 
-	public void setFutureUse(String futureUse) {
-		this.futureUse = futureUse;
+	public void setLName(String lName) {
+		this.lName = lName;
 	}
 
-	public String getLastName() {
-		return this.lastName;
+	public String getMName() {
+		return this.mName;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setMName(String mName) {
+		this.mName = mName;
 	}
 
-	public String getPhone() {
-		return this.phone;
+	public String getPictureUri() {
+		return this.pictureUri;
 	}
 
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setPictureUri(String pictureUri) {
+		this.pictureUri = pictureUri;
 	}
 
-	public String getSex() {
-		return this.sex;
+	public String getPrefix() {
+		return this.prefix;
 	}
 
-	public void setSex(String sex) {
+	public void setPrefix(String prefix) {
+		this.prefix = prefix;
+	}
+
+	public String getRace() {
+		return this.race;
+	}
+
+	public void setRace(String race) {
+		this.race = race;
+	}
+
+	public String getSuffix() {
+		return this.suffix;
+	}
+
+	public void setSuffix(String suffix) {
+		this.suffix = suffix;
+	}
+
+	public Byte getEyeColor() {
+		return eyeColor;
+	}
+
+	public void setEyeColor(Byte eyeColor) {
+		this.eyeColor = eyeColor;
+	}
+
+	public Byte getHairColor() {
+		return hairColor;
+	}
+
+	public void setHairColor(Byte hairColor) {
+		this.hairColor = hairColor;
+	}
+
+	public Float getHeight() {
+		return height;
+	}
+
+	public void setHeight(Float height) {
+		this.height = height;
+	}
+
+	public Byte getSex() {
+		return sex;
+	}
+
+	public void setSex(Byte sex) {
 		this.sex = sex;
 	}
 
-	public User getUser() {
-		return this.user;
+	public Integer getSsn() {
+		return ssn;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setSsn(Integer ssn) {
+		this.ssn = ssn;
 	}
 
+	public Float getWeight() {
+		return weight;
+	}
+
+	public void setWeight(Float weight) {
+		this.weight = weight;
+	}
+
+	public Contact getContact() {
+		return contact;
+	}
+
+	public void setContact(Contact contact) {
+		this.contact = contact;
+	}
+
+	public Contact getEmrContact() {
+		return emrContact;
+	}
+
+	public void setEmrContact(Contact emrContact) {
+		this.emrContact = emrContact;
+	}
+
+	//TODO:Very Bad : Use StdKeySerializer for Map Keys
+	@Override
+	public String toString() {
+	
+		String firstName = fName == null? "" : fName;
+		String middileName = mName == null? "" : mName;
+		String lastName = lName == null? "" : lName;
+		
+		return super.getUserName() + ";" + firstName + ";" + middileName + ";" + lastName;
+	}
+
+	
+	
 }
