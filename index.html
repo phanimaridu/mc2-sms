@@ -51,7 +51,7 @@ Angular JS
 Pencil 2.* (Design and Wire-frames) 
 ArgoUML
 
-Note : you can also use eclipse by generating eclipse project from pom.xml (mvn eclipse:eclipse)
+
 </code></pre>
 
 <h3>
@@ -67,14 +67,10 @@ Pencil 2.*           (http://evoluspencil.googlecode.com/files/Pencil-2.0.5.win3
 ArgoUML              (http://sourceforge.net/projects/argouml.mirror/)
 </code></pre>
 
-<p>All Spring Dependencies are automatically downloaded by using mvn package.
-AngularJS and Bootstrap libraries are provided with gui module source files.
-Spring Boot CLI is needed to host AngualrJS Bootstrap static content.</p>
-
 <h3>
 <a id="modules" class="anchor" href="#modules" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modules</h3>
 
-<p>mc2-sms-rest          (contaims web servics secured with role based basic authentication)
+<p>mc2-sms-rest          (contains web servics secured with role based basic authentication)
 mc2-sms-uibs-web-gui  (Bootstrap,AngularJS based MVC GUI consuming mc2-sms-rest) </p>
 
 <p>Note : mc2-sms-rest          (implementation in progress)
@@ -100,18 +96,23 @@ Go to '/src/mc2-sms-uibs-web-gui' DIR
 Run command 'spring run app.groovy'
 </code></pre>
 
-<p>Refer : <a href="https://spring.io/guides/gs/spring-boot/">https://spring.io/guides/gs/spring-boot/</a>
-Note : Change Server Configurations and Database Connection properties in '${MODULE}/src/main/resources/application.properties' file. 
-       For GUI Module Change Server Configurations in '${MODULE}/application.properties' file.
-       No need to install any web server for any module.</p>
-
 <h3>
 <a id="note" class="anchor" href="#note" aria-hidden="true"><span class="octicon octicon-link"></span></a>Note</h3>
 
 <pre><code>Please find more detailed documentation in ./docs directory
 Please find restful web service traces in ./docs/rest_api/traces directory.
 Please find sources in ./src directory.
+Change Server Configurations and Database Connection properties in '${MODULE}/src/main/resources/application.properties' file. 
+For GUI Module Change Server Configurations in '${MODULE}/application.properties' file.
+
 Spring prefixes role names with 'ROLE_'
+
+No need to install any web server for any module.
+All Spring Dependencies are automatically downloaded by using mvn package.
+AngularJS and Bootstrap libraries are provided with gui module source files.
+Spring Boot CLI is needed to host AngualrJS Bootstrap static content.
+eclipse project can be generated from pom.xml using (mvn eclipse:eclipse)
+You are not restricted to use Spring STS.
 </code></pre>
 
 <h3>
