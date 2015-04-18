@@ -1,9 +1,9 @@
 A School maintenance application (Designed for MC2 STEM HIGH SCHOOL)
 
 If you are looking for Spring Web MVC Rest Application with JDBC Role based security clone security-initial branch.
-  - Security implemented by using Spring UserDataService and spring-data-jpa.
-  - Staff Rest Controller implemented with GET,PUT,POST,DELETE (Complies with Richardson Maturity Model Level - 2 Standards)
-  - Sample Spring Unit Test cases and Web Integration Test cases provided in this branch.
+- Security implemented by using Spring UserDataService and spring-data-jpa.
+- User Rest Controller implemented with GET,PUT,POST,DELETE (Complies with Richardson Maturity Model Level - 2 Standards) 
+- Sample Spring Unit Test cases and Web Integration Test cases provided in this branch.
 
 
 Technologies Used
@@ -27,9 +27,6 @@ Angular JS
 Pencil 2.* (Design and Wire-frames) 
 ArgoUML
 
-Note : you can also use eclipse by generating eclipse project from pom.xml (mvn eclipse:eclipse)
-
-
 
 Downloads
 ---------
@@ -43,19 +40,14 @@ Pencil 2.*           (http://evoluspencil.googlecode.com/files/Pencil-2.0.5.win3
 ArgoUML              (http://sourceforge.net/projects/argouml.mirror/)
 AngularJS Plugin     (http://marketplace.eclipse.org/content/angularjs-eclipse)
 
-All Spring Dependencies are automatically downloaded by using mvn package.
-AngularJS and Bootstrap libraries are provided with gui module source files.
-Spring Boot CLI is needed to host AngualrJS Bootstrap static content.
 
 
 Modules
 -------
-mc2-sms-rest (contaims web servics secured with role based basic authentication)
-mc2-sms-web-gui (Bootstrap,AngularJS based MVC GUI consuming mc2-sms-rest) 
-
-Note : mc2-sms-rest          (implementation in progress)
-       mc2-sms-uibs-web-gui  (in design phase)
-       
+mc2-sms-rest          (contains web servics secured with role based basic authentication) 
+                      (implementation in progress)
+mc2-sms-uibs-web-gui  (Bootstrap,AngularJS based MVC GUI consuming mc2-sms-rest)  
+                      (in design phase)
        
        
 How to Run mc2-sms-rest 
@@ -63,10 +55,10 @@ How to Run mc2-sms-rest
 Install JAVA and MAVEN
 Install MySQL and import DB Scripts (./db/v0.2/sms_create_insert.sql)
 Go to '/src/mc2-sms-rest' DIR
-  - Build sources using (mvn package) 
-  - Run application from JAR (java -jar target/mc2-sms-rest-0.1.0.jar)  
+  Build sources using (mvn package) 
+  Run application from JAR (java -jar target/mc2-sms-rest-0.1.0.jar)  
         OR
-  - Run command (mvn spring-boot:run)
+  Run command (mvn spring-boot:run)
 
   
 How to Run mc2-sms-uibs-web-gui
@@ -76,15 +68,20 @@ Go to '/src/mc2-sms-uibs-web-gui' DIR
 Run command 'spring run app.groovy'
 
 
-
+Notes
+-----
 Refer : https://spring.io/guides/gs/spring-boot/
-Note  : Change Server Configurations and Database Connection properties in '${MODULE}/src/main/resources/application.properties' file. 
-        For GUI Module Change Server Configurations in '${MODULE}/application.properties' file. 
-	    No need to install any web server for any module.
+Please find more detailed documentation in ./docs directory
+Please find restful web service traces in ./docs/rest_api/traces directory.
+Please find sources in ./src directory.
+Change Server Configurations and Database Connection properties in '${MODULE}/src/main/resources/application.properties' file. 
+For GUI Module Change Server Configurations in '${MODULE}/application.properties' file.
 
+Spring prefixes role names with 'ROLE_'
 
-
-Note : Please find more detailed documentation in ./docs directory
-       Please find restful web service traces in ./docs/rest_api/traces directory.
-       Please find sources in ./src directory.
-       Spring prefixes role names with 'ROLE_'
+No need to install any web server for any module.
+All Spring Dependencies are automatically downloaded by using mvn package.
+AngularJS and Bootstrap libraries are provided with gui module source files.
+Spring Boot CLI is needed to host AngualrJS Bootstrap static content.
+eclipse project can be generated from pom.xml using (mvn eclipse:eclipse)
+You are not restricted to use Spring STS.
