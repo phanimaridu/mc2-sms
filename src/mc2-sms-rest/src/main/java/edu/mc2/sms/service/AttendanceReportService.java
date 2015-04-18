@@ -20,7 +20,6 @@ import edu.mc2.sms.jpa.model.AttendanceReportDTO;
 import edu.mc2.sms.jpa.repository.CourseScheduleRepository;
 
 @Service
-@Transactional
 public class AttendanceReportService {
 
 	@Autowired
@@ -29,7 +28,8 @@ public class AttendanceReportService {
 	@Autowired
 	private CourseScheduleRepository courseScheduleRepository;
 	
-	
+
+    @Transactional
 	public AttendanceReportDTO getAttendanceReport(int courseScheduleId,Date lb,Date ub){
 		
 		AttendanceReportDTO result = new AttendanceReportDTO();

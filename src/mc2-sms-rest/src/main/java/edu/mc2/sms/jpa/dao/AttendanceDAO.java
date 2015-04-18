@@ -9,7 +9,6 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 @Repository
-@Transactional
 public class AttendanceDAO extends HibernateDaoSupport{
 
 	@Autowired
@@ -18,6 +17,7 @@ public class AttendanceDAO extends HibernateDaoSupport{
     }
 
 
+	@Transactional
 	public List<Object[]> getNoOfPresentAttendanceGropByStudent(int courseScheduleId) {
 
 		String qryStr = "SELECT "

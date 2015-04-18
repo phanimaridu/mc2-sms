@@ -1,6 +1,9 @@
 package edu.mc2.sms.cntrlr.rest;
 
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.http.HttpStatus;
@@ -40,6 +43,18 @@ public class PublicRestController {
 		
 		return person;
 		
+	}
+	
+	@RequestMapping(value = "/test", method = RequestMethod.GET)
+	public Map<String,String> getTestData() {
+		
+		Map<String,String> result = new HashMap<String, String>();
+		result.put("Name ", "Jack the Ripper");
+		result.put("City", "London");
+		result.put("Occupation", "Bad Guy");
+		
+		
+		return result;
 	}
 	
 
