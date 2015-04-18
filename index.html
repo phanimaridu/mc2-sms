@@ -27,7 +27,6 @@
 <pre><code>- Security implemented by using Spring UserDataService and spring-data-jpa.
   - User Rest Controller implemented with GET,PUT,POST,DELETE (Complies with Richardson Maturity Model Level - 2 Standards)
   - Sample Spring Unit Test cases and Web Integration Test cases provided in this branch.
-  clone link : https://github.com/phanimaridu/mc2-sms.git
 </code></pre>
 
 <h3>
@@ -38,6 +37,7 @@ Maven 3.2.3
 Spring Development Tool Suite 3.6.4 (IDE)
 Spring 4
   Spring Boot
+  Spring Boot CLI
   Spring Data JPA
   Hibernate
   Spring Test
@@ -50,9 +50,9 @@ Bootstrap
 Angular JS
 Pencil 2.* (Design and Wire-frames) 
 ArgoUML
-</code></pre>
 
-<p>Note : you can also use eclipse by generating eclipse project from pom.xml (mvn eclipse:eclipse)</p>
+Note : you can also use eclipse by generating eclipse project from pom.xml (mvn eclipse:eclipse)
+</code></pre>
 
 <h3>
 <a id="downloads" class="anchor" href="#downloads" aria-hidden="true"><span class="octicon octicon-link"></span></a>Downloads</h3>
@@ -60,6 +60,7 @@ ArgoUML
 <pre><code>JDK 1.7.0            (http://download.oracle.com/otn-pub/java/jdk/7u75-b13/jdk-7u75-windows-x64.exe)
 Maven 3.2.3          (http://www.trieuvan.com/apache/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.zip)
 Spring STS 3.6.4     (http://dist.springsource.com/release/STS/3.6.4.RELEASE/dist/e4.4/spring-tool-suite-3.6.4.RELEASE-e4.4.2-win32-x86_64.zip)
+Spring Boot CLI      (http://repo.spring.io/release/org/springframework/boot/spring-boot-cli/1.1.4.RELEASE/spring-boot-cli-1.1.4.RELEASE-bin.zip)
 MySQL 5.6            (http://dev.mysql.com/downloads/)
 MySQL Workbench      (http://dev.mysql.com/downloads/)
 Pencil 2.*           (http://evoluspencil.googlecode.com/files/Pencil-2.0.5.win32.installer.exe)
@@ -67,30 +68,42 @@ ArgoUML              (http://sourceforge.net/projects/argouml.mirror/)
 </code></pre>
 
 <p>All Spring Dependencies are automatically downloaded by using mvn package.
-AngularJS and Bootstrap libraries are provided with gui module source files.</p>
+AngularJS and Bootstrap libraries are provided with gui module source files.
+Spring Boot CLI is needed to host AngualrJS Bootstrap static content.</p>
 
 <h3>
 <a id="modules" class="anchor" href="#modules" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modules</h3>
 
-<p>mc2-sms-rest (contaims web servics secured with role based basic authentication)
-mc2-sms-web-gui (Bootstrap,AngularJS based MVC GUI consuming mc2-sms-rest) </p>
+<p>mc2-sms-rest          (contaims web servics secured with role based basic authentication)
+mc2-sms-uibs-web-gui  (Bootstrap,AngularJS based MVC GUI consuming mc2-sms-rest) </p>
 
-<p>Note : mc2-sms-rest    (implementation in progress)
-       mc2-sms-web-gui (in design phase)</p>
+<p>Note : mc2-sms-rest          (implementation in progress)
+       mc2-sms-uibs-web-gui (in design phase)</p>
 
 <h3>
 <a id="how-to-run-mc2-sms-rest" class="anchor" href="#how-to-run-mc2-sms-rest" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to Run mc2-sms-rest</h3>
 
 <pre><code>Install JAVA and MAVEN
-Install MySQL and import DB Scripts (./db/sms.sql)
-Build sources using (mvn package) 
-Run application from JAR (java -jar target/mc2-sms-rest-0.1.0.jar)
+Install MySQL and import DB Scripts (./db/v0.2/sms_create_insert.sql)
+Go to '/src/mc2-sms-rest' DIR
+  Build sources using (mvn package) 
+  Run application from JAR (java -jar target/mc2-sms-rest-0.1.0.jar)  
+        OR
+  Run command (mvn spring-boot:run)
+</code></pre>
+
+<h3>
+<a id="how-to-run-mc2-sms-uibs-web-gui" class="anchor" href="#how-to-run-mc2-sms-uibs-web-gui" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to Run mc2-sms-uibs-web-gui</h3>
+
+<pre><code>Install Spring Boot CLI
+Go to '/src/mc2-sms-uibs-web-gui' DIR
+Run command 'spring run app.groovy'
 </code></pre>
 
 <p>Refer : <a href="https://spring.io/guides/gs/spring-boot/">https://spring.io/guides/gs/spring-boot/</a>
-Note : Change Server Configurations and Database Connection properties in 
-       '${MODULE}/src/main/resources/application.properties' file. 
-       No need to install any web server. Just start the jar using command</p>
+Note : Change Server Configurations and Database Connection properties in '${MODULE}/src/main/resources/application.properties' file. 
+       For GUI Module Change Server Configurations in '${MODULE}/application.properties' file.
+       No need to install any web server for any module.</p>
 
 <h3>
 <a id="note" class="anchor" href="#note" aria-hidden="true"><span class="octicon octicon-link"></span></a>Note</h3>
