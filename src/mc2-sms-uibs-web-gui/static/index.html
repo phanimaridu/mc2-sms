@@ -6,6 +6,8 @@
   <!-- CSS Libraries -->
   <link rel="stylesheet" href = "css/bootstrap.min.css">
   <link rel="stylesheet" href = "css/bootstrap-theme.min.css">
+
+  <link rel="stylesheet" href="css/header-styles.css">
   
   <!-- JS Libraries -->
   <script src="js/angular.min.js"></script>
@@ -16,36 +18,38 @@
 
 <body >
 
-<span class="label label-default">Default</span>
-<span class="label label-primary">Primary</span>
-<span class="label label-success">Success</span>
-<span class="label label-info">Info</span>
-<span class="label label-warning">Warning</span>
-<span class="label label-danger">Danger</span>
+<!-- header -->
+<div id="top-nav" class="navbar navbar-inverse navbar-static-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Welcome lName fName</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#">
+						<span class="glyphicon glyphicon glyphicon-user" /> Admin <span class="caret"></span>
+					</a>
+                    <ul id="g-account-menu" class="dropdown-menu" role="menu">
+                        <li><a href="#">My Profile</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><span class="glyphicon glyphicon glyphicon-log-out" /> Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- /container -->
+</div>
+<!-- /Header -->
 
 
-	  <div ng-app="invoice1" ng-controller="InvoiceController as invoice">
-		<b>Invoice:</b>
-		<div>
-			Quantity: <input type="number" min="0" ng-model="invoice.qty" required >
-		</div>
-		<div>
-			Costs: <input type="number" min="0" ng-model="invoice.cost" required >
-			<select ng-model="invoice.inCurr">
-				<option ng-repeat="c in invoice.currencies">{{c}}</option>
-			</select>
-		</div>
-		<div>
-			<b>Total:</b>
-			<span ng-repeat="c in invoice.currencies">
-				{{invoice.total(c) | currency:c}}
-			</span>
-			<button class="btn" ng-click="invoice.pay()">Pay</button>
-		</div>
-	  </div>
 
 
-	
 	<!-- Application Scripts -->
 	 <script src="js/templates/invoice.js"></script>
 	
