@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import edu.mc2.sms.common.MinimizerUtil;
-import edu.mc2.sms.excepion.rest.ResourceNotFoundException;
+import edu.mc2.sms.excepion.ResourceNotFoundException;
 import edu.mc2.sms.jpa.dao.AttendanceDAO;
 import edu.mc2.sms.jpa.entity.Attendance;
 import edu.mc2.sms.jpa.entity.CourseSchedule;
