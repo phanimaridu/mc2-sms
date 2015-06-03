@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50616
 File Encoding         : 65001
 
-Date: 2015-04-13 18:42:48
+Date: 2015-06-02 13:08:44
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -22,16 +22,31 @@ DROP TABLE IF EXISTS `attendance`;
 CREATE TABLE `attendance` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `student_course_enrollment_id` int(11) DEFAULT NULL,
-  `taken_dtt` datetime DEFAULT NULL,
-  `taken_by` varchar(50) DEFAULT NULL,
   `comment` varchar(255) DEFAULT NULL,
   `status` tinyint(1) DEFAULT NULL COMMENT '1=PRESENT,2=ABSENT, 3=ON_LEAVE, 4=SICK, 5=OTHERS',
+  `taken_by` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `student_course_enrollment_id_fk` (`student_course_enrollment_id`),
-  KEY `staff_id_fk3` (`taken_by`),
-  CONSTRAINT `attendance_ibfk_1` FOREIGN KEY (`taken_by`) REFERENCES `staff` (`user_name`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `attendance_ibfk_2` FOREIGN KEY (`student_course_enrollment_id`) REFERENCES `student_course_enrollment` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=878 DEFAULT CHARSET=latin1;
+  KEY `student_course_enrollment_id` (`student_course_enrollment_id`),
+  KEY `taken_by` (`taken_by`),
+  CONSTRAINT `attendance_ibfk_1` FOREIGN KEY (`student_course_enrollment_id`) REFERENCES `student_course_enrollment` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `attendance_ibfk_2` FOREIGN KEY (`taken_by`) REFERENCES `attendance_by` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=3900 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Table structure for attendance_by
+-- ----------------------------
+DROP TABLE IF EXISTS `attendance_by`;
+CREATE TABLE `attendance_by` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `taken_dtt` datetime DEFAULT NULL,
+  `taken_by` varchar(255) DEFAULT NULL,
+  `course_schedule_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `taken_by` (`taken_by`),
+  KEY `course_schedule_id` (`course_schedule_id`),
+  CONSTRAINT `attendance_by_ibfk_1` FOREIGN KEY (`taken_by`) REFERENCES `person` (`user_name`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `attendance_by_ibfk_2` FOREIGN KEY (`course_schedule_id`) REFERENCES `course_schedule` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=3925 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Table structure for contact
@@ -52,7 +67,7 @@ CREATE TABLE `contact` (
   `zip` int(10) DEFAULT NULL,
   `notes` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Table structure for course
@@ -74,7 +89,7 @@ CREATE TABLE `course` (
 DROP TABLE IF EXISTS `course_schedule`;
 CREATE TABLE `course_schedule` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `course_id` int(11) NOT NULL,
+  `course_id` int(11) DEFAULT NULL,
   `instructor_user_name` varchar(255) DEFAULT NULL,
   `status` tinyint(1) DEFAULT NULL,
   `term` varchar(25) DEFAULT NULL,
@@ -194,7 +209,7 @@ CREATE TABLE `student_course_enrollment` (
   KEY `student_id_fk_2` (`student_user_name`),
   CONSTRAINT `student_course_enrollment_ibfk_1` FOREIGN KEY (`student_user_name`) REFERENCES `student` (`user_name`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `student_course_enrollment_ibfk_2` FOREIGN KEY (`course_schedule_id`) REFERENCES `course_schedule` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Table structure for user
