@@ -48,7 +48,7 @@ public class StaffService {
 		}
 		
 		if (repo.findOne(staff.getUserName()) != null) {
-			throw new ConflictException("User Alreasy Exists");
+			throw new ConflictException("User Already Exists");
 		}
 		staff.setPassword(new BCryptPasswordEncoder().encode(staff.getPassword()));
 		repo.save(staff);
@@ -65,6 +65,7 @@ public class StaffService {
 		if (repo.findOne(userName) == null) {
 			throw new ResourceNotFoundException("Staff Not Found");
 		}
+		staff.setUserName(userName);
 		// encode password to BCrypt hash
 		staff.setPassword(new BCryptPasswordEncoder().encode(staff.getPassword()));
 		repo.save(staff);

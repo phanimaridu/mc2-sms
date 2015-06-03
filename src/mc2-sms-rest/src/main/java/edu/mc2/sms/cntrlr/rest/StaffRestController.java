@@ -17,6 +17,15 @@ import org.springframework.web.util.UriComponentsBuilder;
 import edu.mc2.sms.jpa.entity.Staff;
 import edu.mc2.sms.service.StaffService;
 
+/*
+ * Swager Documentation
+ * @Api(basePath = "/staff", value = "Staff", description = "Operations with Staff", produces = "application/json")
+ * 
+ * @ApiOperation(value = "List<Staff>", notes = "Returns All Staff Members")
+    @ApiResponses(value = {
+            @ApiResponse(code = 404, message = "Staffs Not Found"),
+            @ApiResponse(code = 200, message = "") })
+ */
 
 @RestController
 @RequestMapping("/staff")
@@ -27,6 +36,7 @@ public class StaffRestController {
 	
 
 	@RequestMapping(method = RequestMethod.GET)
+	
 	public List<Staff> getStaffs() {
 		return staffService.getStaffs();
 	}

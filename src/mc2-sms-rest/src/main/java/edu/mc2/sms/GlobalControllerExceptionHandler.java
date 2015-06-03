@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 import edu.mc2.sms.excepion.ConflictException;
 import edu.mc2.sms.excepion.ResourceNotFoundException;
-import edu.mc2.sms.jpa.model.ErrorMessage;
+import edu.mc2.sms.model.ErrorMessage;
 
 @ControllerAdvice
 public class GlobalControllerExceptionHandler {

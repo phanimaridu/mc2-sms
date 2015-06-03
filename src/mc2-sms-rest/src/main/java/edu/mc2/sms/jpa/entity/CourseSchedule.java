@@ -1,14 +1,25 @@
 package edu.mc2.sms.jpa.entity;
 
 import java.io.Serializable;
-
-import javax.persistence.*;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-
 import java.util.Date;
 import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 
 /**
@@ -26,18 +37,22 @@ public class CourseSchedule implements Serializable {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 
+	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd")
 	@Temporal(TemporalType.DATE)
 	@Column(name="start_dt")
 	private Date startDt;
-	
+
+	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd")
 	@Temporal(TemporalType.DATE)
 	@Column(name="end_dt")
 	private Date endDt;
 
+	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="HH:mm:ss")
 	@Temporal(TemporalType.TIME)
 	@Column(name="start_time")
 	private Date startTime;
-	
+
+	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="HH:mm:ss")
 	@Temporal(TemporalType.TIME)
 	@Column(name="end_time")
 	private Date endTime;

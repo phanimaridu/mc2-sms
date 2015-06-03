@@ -6,38 +6,53 @@ import java.util.List;
 import edu.mc2.sms.jpa.entity.Attendance;
 import edu.mc2.sms.jpa.entity.Course;
 import edu.mc2.sms.jpa.entity.CourseSchedule;
+import edu.mc2.sms.jpa.entity.Staff;
 import edu.mc2.sms.jpa.entity.Student;
 import edu.mc2.sms.jpa.entity.StudentCourseEnrollment;
 
 //TODO:Replace this code with jakson dynamic inclusion/exclusion strategy
+//FIXME:Null Pointer Checks
 public class MinimizerUtil {
 
 
+
 	
-	public static List<CourseSchedule> getMinimizedCourseSchedule(List<CourseSchedule> courseSchedules){
+	public static List<CourseSchedule> getMinimizedCourseSchedules(List<CourseSchedule> courseSchedules){
 		List<CourseSchedule> minimizedResult = null; 
 		if(courseSchedules != null){
 			minimizedResult = new ArrayList<CourseSchedule>();
 			for(CourseSchedule courseSchedule : courseSchedules){
-				minimizedResult.add(getMinimizedCourseSchedules(courseSchedule));
+				minimizedResult.add(getMinimizedCourseSchedule(courseSchedule));
 			}
 		}
 		return minimizedResult;
 	}
 	
 	
-	public static CourseSchedule getMinimizedCourseSchedules(CourseSchedule courseSchedule){
+	public static CourseSchedule getMinimizedCourseSchedule(CourseSchedule courseSchedule){
 		
 		if(courseSchedule == null) return null;
 		
 		CourseSchedule minmizedCS = new CourseSchedule();
 		
 		minmizedCS.setId(courseSchedule.getId());
+		minmizedCS.setStartDt(courseSchedule.getStartDt());
+		minmizedCS.setStartTime(courseSchedule.getStartTime());
+		minmizedCS.setEndDt(courseSchedule.getEndDt());
+		minmizedCS.setEndTime(courseSchedule.getEndTime());
+		minmizedCS.setRoomNo(courseSchedule.getRoomNo());
+		minmizedCS.setStatus(courseSchedule.getStatus());
+		minmizedCS.setFutureUse(courseSchedule.getFutureUse());
+		minmizedCS.setTerm(courseSchedule.getTerm());
 		
 		Course minmizedCourse = new Course();
 		minmizedCourse.setId(courseSchedule.getCourse().getId());
 		minmizedCourse.setName(courseSchedule.getCourse().getName());
 		minmizedCS.setCourse(minmizedCourse);
+		
+		
+		minmizedCS.setStaff(new Staff());
+		minmizedCS.getStaff().setUserName(courseSchedule.getStaff().getUserName());
 		
 		return minmizedCS;
 	}
@@ -62,18 +77,22 @@ public class MinimizerUtil {
 			result = new StudentCourseEnrollment();
 			
 			result.setId(studentCourseEnrollment.getId());
+			result.setEnrolledDtt(studentCourseEnrollment.getEnrolledDtt());
+			result.setGrade(studentCourseEnrollment.getGrade());
+			result.setStatus(studentCourseEnrollment.getStatus());
 			
 			Student enrolledStudent = studentCourseEnrollment.getStudent();
-			if(studentCourseEnrollment.getStudent() != null){
+			if(enrolledStudent != null){
 				Student resultStudent = new Student();
-				
 				resultStudent.setUserName(enrolledStudent.getUserName());
-				resultStudent.setId(enrolledStudent.getId());
-				resultStudent.setFName(enrolledStudent.getFName());
-				resultStudent.setMName(enrolledStudent.getMName());
-				resultStudent.setLName(enrolledStudent.getLName());
-				
 				result.setStudent(resultStudent);
+			}
+			
+			CourseSchedule enrolledCS = studentCourseEnrollment.getCourseSchedule();
+			if(studentCourseEnrollment.getCourseSchedule() != null){
+				CourseSchedule resultCS = new CourseSchedule();
+				resultCS.setId(enrolledCS.getId());
+				result.setCourseSchedule(resultCS);
 			}
 		}
 		return result;
@@ -106,8 +125,7 @@ public class MinimizerUtil {
 			}
 			
 			 */
-			
-			result.setTakenDtt(attendance.getTakenDtt());
+			result.setId(attendance.getId());
 			result.setComment(attendance.getComment());
 			result.setStatus(attendance.getStatus());
 		}
@@ -121,6 +139,7 @@ public class MinimizerUtil {
 		if(student != null){
 			result = new Student();
 			
+			result.setId(student.getId());
 			result.setUserName(student.getUserName());
 			result.setFName(student.getFName());
 			result.setMName(student.getMName());
