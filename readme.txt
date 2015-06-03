@@ -26,6 +26,7 @@ Bootstrap
 Angular JS
 Pencil 2.* (Design and Wire-frames) 
 ArgoUML
+Swagger
 
 
 Downloads
@@ -44,8 +45,7 @@ AngularJS Plugin     (http://marketplace.eclipse.org/content/angularjs-eclipse)
 
 Modules
 -------
-mc2-sms-rest          (contains web servics secured with role based basic authentication) 
-                      (implementation in progress)
+mc2-sms-rest          (contains web servics secured with role based basic authentication and ssl) 
 mc2-sms-uibs-web-gui  (Bootstrap,AngularJS based MVC GUI consuming mc2-sms-rest)  
                       (in design phase)
        
@@ -72,7 +72,7 @@ Notes
 -----
 Refer : https://spring.io/guides/gs/spring-boot/
 Please find more detailed documentation in ./docs directory
-Please find restful web service traces in ./docs/rest_api/traces directory.
+Please find restful web service documenation at https://{ROOT}/swagger/index.html
 Please find sources in ./src directory.
 Change Server Configurations and Database Connection properties in '${MODULE}/src/main/resources/application.properties' file. 
 For GUI Module Change Server Configurations in '${MODULE}/application.properties' file.
