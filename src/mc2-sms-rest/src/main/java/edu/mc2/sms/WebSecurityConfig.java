@@ -25,13 +25,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
             .authorizeRequests()
-			.antMatchers("/public/**")
+			.antMatchers("/public/**","/swagger/**", "/api-docs/**")
 				.permitAll()
-			.antMatchers("/student/**")
+				//remove all methods accept get from /student
+			.antMatchers("/student/**","/attendance_report/student")
 				.hasAuthority(ROLE_STUDENT)
-			.antMatchers("/staff/**")
+				//remove all methods accept get from /staff
+			.antMatchers("/staff/**","/attendance_report/student")
 				.hasAuthority(ROLE_STAFF)
-			.antMatchers("/**","/staff/**")
+			.antMatchers("/**","/staff/**","/student/**","/attendance_report/student")
 				.hasAuthority(ROLE_ADMIN)
 			.anyRequest().authenticated().and()
             .httpBasic();

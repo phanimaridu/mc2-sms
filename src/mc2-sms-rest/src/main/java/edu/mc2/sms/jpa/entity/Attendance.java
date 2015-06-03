@@ -2,11 +2,15 @@ package edu.mc2.sms.jpa.entity;
 
 import java.io.Serializable;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-
-import java.util.Date;
 
 
 /**
@@ -25,16 +29,12 @@ public class Attendance implements Serializable {
 
 	private String comment;
 
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name="taken_dtt")
-	private Date takenDtt;
-
 	private Byte status;
 	
-	//many-to-one association to Staff
+	//bi-directional many-to-one association to AttendanceBy
 	@ManyToOne
 	@JoinColumn(name="taken_by")
-	private Staff staff;
+	private AttendanceBy attendanceBy;
 
 	//bi-directional many-to-one association to StudentCourseEnrollment
 	@ManyToOne
@@ -60,21 +60,6 @@ public class Attendance implements Serializable {
 		this.comment = comment;
 	}
 
-	public Date getTakenDtt() {
-		return this.takenDtt;
-	}
-
-	public void setTakenDtt(Date takenDtt) {
-		this.takenDtt = takenDtt;
-	}
-
-	public Staff getStaff() {
-		return this.staff;
-	}
-
-	public void setStaff(Staff staff) {
-		this.staff = staff;
-	}
 
 	public Byte getStatus() {
 		return status;
@@ -82,6 +67,14 @@ public class Attendance implements Serializable {
 
 	public void setStatus(Byte status) {
 		this.status = status;
+	}
+
+	public AttendanceBy getAttendanceBy() {
+		return attendanceBy;
+	}
+
+	public void setAttendanceBy(AttendanceBy attendanceBy) {
+		this.attendanceBy = attendanceBy;
 	}
 
 	public StudentCourseEnrollment getStudentCourseEnrollment() {
