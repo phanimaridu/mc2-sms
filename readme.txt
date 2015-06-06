@@ -72,7 +72,7 @@ Notes
 -----
 Refer : https://spring.io/guides/gs/spring-boot/
 Please find more detailed documentation in ./docs directory
-Please find restful web service documenation at https://{ROOT}/swagger/index.html
+Please find restful web service documentation at https://{ROOT}/swagger/index.html
 Please find sources in ./src directory.
 Change Server Configurations and Database Connection properties in '${MODULE}/src/main/resources/application.properties' file. 
 For GUI Module Change Server Configurations in '${MODULE}/application.properties' file.
