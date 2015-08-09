@@ -19,7 +19,7 @@ import edu.mc2.sms.jpa.repository.UserRepository;
 @SpringApplicationConfiguration(classes = Application.class)
 public class UserRepositoryTest {
 
-	
+	//Git Test
 
 	@Autowired
 	private UserRepository userDAO;
